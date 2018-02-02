@@ -3,7 +3,7 @@
 // ------------------------------
 
 
-rule "Power on/off"
+rule "Power TV on/off"
   when 
     Item SW_LGTV received command
   then
