@@ -1,0 +1,15 @@
+// ------------------------------
+// Rules to control the TV
+// ------------------------------
+
+
+rule "Power on/off"
+  when 
+    Item SW_LGTV received command
+  then
+    if (receivedCommand == ON) {
+        HarmonyTV.sendCommand("PowerOn")
+    } else {
+        HarmonyTV.sendCommand("PowerOff")
+    }
+  end
