@@ -1,0 +1,6 @@
+rule "SW_TV"
+  when 
+    Item SW_TV received command
+  then
+    HarmonyTV.sendCommand("PowerOn")
+  end

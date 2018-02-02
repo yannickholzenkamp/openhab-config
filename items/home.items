@@ -1,0 +1,1 @@
+Switch SW_TV "TV Switch" [Switchable] {channel=">[ON] >[OFF]"}
