@@ -1,9 +1,10 @@
 sitemap home label="My Home" {
     Frame label="Media Devices" {
         Switch item=SW_LGTV icon="screen"
-        Switch item=SW_HKAVR icon="screen"
+        Switch item=SW_HKAVR icon="receiver"
     }
     Frame label="Lighting" {
-        Switch item=SW_HUE_LS icon="screen"
+        Switch item=SW_HUE_LS icon="lightbulb"
+        Slider item=DM_HUE_LS icon="lightbulb"
     }
 }

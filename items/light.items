@@ -2,4 +2,8 @@
 // Items to control lighting
 // ------------------------------
 
+// Lightstrip
+// ------------------------------
 Switch SW_HUE_LS "Hue Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Dimmer DM_HUE_LS "Hue Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Color  CL_HUE_LS "Hue Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
