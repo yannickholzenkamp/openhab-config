@@ -26,6 +26,6 @@ rule "Dim all lights"
   then
     DM_HUE_LS.sendCommand(receivedCommand)
     DM_HUE_DL.sendCommand(receivedCommand)
-    DM_HUE_ST.sendCommand(receivedCommand90)
+    DM_HUE_ST.sendCommand(receivedCommand)
     DM_HUE_KS.sendCommand(receivedCommand)
   end
