@@ -7,7 +7,7 @@ sitemap home label="My Home" {
 
         Switch item=SW_HUE_ALL icon="lightbulb"
 
-        Text item=LIGHTS label="Lighting Details" icon="lightbulb" {
+        Text item=LIGHTS label="Lighting Settings" icon="lightbulb" {
 
             Switch item=SW_HUE_LS icon="lightbulb"
             Slider item=DM_HUE_LS icon="lightbulb"

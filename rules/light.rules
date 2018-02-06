@@ -8,8 +8,8 @@ rule "All lights on"
     Item SW_HUE_ALL received command
   then
     if (receivedCommand == ON) {
-        HARMONY_LGTV.sendCommand("ON")
+        SW_HUE_LS.sendCommand("ON")
     } else {
-        HARMONY_LGTV.sendCommand("OFF")
+        SW_HUE_LS.sendCommand("OFF")
     }
   end
