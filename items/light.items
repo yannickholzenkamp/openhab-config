@@ -1,0 +1,5 @@
+// ------------------------------
+// Items to control lighting
+// ------------------------------
+
+Switch SW_HUE_LS "Hue Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}

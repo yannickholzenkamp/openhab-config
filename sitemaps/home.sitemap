@@ -1,6 +1,9 @@
-sitemap myhome label="My Home" {
+sitemap home label="My Home" {
     Frame label="Media Devices" {
         Switch item=SW_LGTV icon="screen"
         Switch item=SW_HKAVR icon="screen"
+    }
+    Frame label="Lighting" {
+        Switch item=SW_HUE_LS icon="screen"
     }
 }
