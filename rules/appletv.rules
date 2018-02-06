@@ -1,0 +1,15 @@
+// ------------------------------
+// Rules to control the HK AVR
+// ------------------------------
+
+
+rule "Power Apple TV on/off"
+  when 
+    Item SW_APLTV received command
+  then
+    if (receivedCommand == ON) {
+        HarmonyTV.sendCommand("PowerOn")
+    } else {
+        HarmonyTV.sendCommand("PowerOff")
+    }
+  end
