@@ -1,0 +1,5 @@
+sitemap myhome label="My Home" {
+    Frame label="Media Devices" {
+        Switch item=SW_LGTV icon="screen"
+    }
+}
