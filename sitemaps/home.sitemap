@@ -5,22 +5,22 @@ sitemap home label="My Home" {
     }
     Frame label="Lighting" {
 
-        Switch item=SW_HUE_ALL icon="lightbulb"
-        Slider item=DM_HUE_ALL icon="lightbulb"
+        Switch item=CL_HUE_ALL icon="lightbulb"
+        Slider item=CL_HUE_ALL icon="lightbulb"
 
         Text item=LIGHTS label="Lighting Settings" icon="lightbulb" {
 
-            Switch item=SW_HUE_LS icon="lightbulb"
-            Slider item=DM_HUE_LS icon="lightbulb"
+            Switch item=CL_HUE_LS icon="lightbulb"
+            Slider item=CL_HUE_LS icon="lightbulb"
 
-            Switch item=SW_HUE_DL icon="lightbulb"
-            Slider item=DM_HUE_DL icon="lightbulb"
+            Switch item=CL_HUE_DL icon="lightbulb"
+            Slider item=CL_HUE_DL icon="lightbulb"
 
-            Switch item=SW_HUE_ST icon="lightbulb"
-            Slider item=DM_HUE_ST icon="lightbulb"
+            Switch item=CL_HUE_ST icon="lightbulb"
+            Slider item=CL_HUE_ST icon="lightbulb"
 
-            Switch item=SW_HUE_KS icon="lightbulb"
-            Slider item=DM_HUE_KS icon="lightbulb"
+            Switch item=CL_HUE_KS icon="lightbulb"
+            Slider item=CL_HUE_KS icon="lightbulb"
 
         }
 

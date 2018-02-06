@@ -8,24 +8,24 @@ rule "All lights on"
     Item SW_HUE_ALL received command
   then
     if (receivedCommand == ON) {
-        SW_HUE_LS.sendCommand("ON")
-        SW_HUE_DL.sendCommand("ON")
-        SW_HUE_ST.sendCommand("ON")
-        SW_HUE_KS.sendCommand("ON")
+        CL_HUE_LS.sendCommand("ON")
+        CL_HUE_DL.sendCommand("ON")
+        CL_HUE_ST.sendCommand("ON")
+        CL_HUE_KS.sendCommand("ON")
     } else {
-        SW_HUE_LS.sendCommand("OFF")
-        SW_HUE_DL.sendCommand("OFF")
-        SW_HUE_ST.sendCommand("OFF")
-        SW_HUE_KS.sendCommand("OFF")
+        CL_HUE_LS.sendCommand("OFF")
+        CL_HUE_DL.sendCommand("OFF")
+        CL_HUE_ST.sendCommand("OFF")
+        CL_HUE_KS.sendCommand("OFF")
     }
   end
 
 rule "Dim all lights"
   when 
-    Item DM_HUE_ALL received command
+    Item CL_HUE_ALL received command
   then
-    DM_HUE_LS.sendCommand(receivedCommand)
-    DM_HUE_DL.sendCommand(receivedCommand)
-    DM_HUE_ST.sendCommand(receivedCommand)
-    DM_HUE_KS.sendCommand(receivedCommand)
+    CL_HUE_LS.sendCommand(receivedCommand)
+    CL_HUE_DL.sendCommand(receivedCommand)
+    CL_HUE_ST.sendCommand(receivedCommand)
+    CL_HUE_KS.sendCommand(receivedCommand)
   end
