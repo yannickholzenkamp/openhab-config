@@ -9,7 +9,23 @@ rule "All lights on"
   then
     if (receivedCommand == ON) {
         SW_HUE_LS.sendCommand("ON")
+        SW_HUE_DL.sendCommand("ON")
+        SW_HUE_ST.sendCommand("ON")
+        SW_HUE_KS.sendCommand("ON")
     } else {
         SW_HUE_LS.sendCommand("OFF")
+        SW_HUE_DL.sendCommand("OFF")
+        SW_HUE_ST.sendCommand("OFF")
+        SW_HUE_KS.sendCommand("OFF")
     }
+  end
+
+rule "Dim all lights"
+  when 
+    Item DM_HUE_ALL received command
+  then
+    SW_HUE_LS.sendCommand(10)
+    SW_HUE_DL.sendCommand(50)
+    SW_HUE_ST.sendCommand(90)
+    SW_HUE_KS.sendCommand(75)
   end
