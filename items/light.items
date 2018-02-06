@@ -5,30 +5,30 @@
 // Lightstrip
 // ------------------------------
 Group HUE_LS "Hue Lightstrip" [Lighting]
-Switch SW_HUE_LS "Status Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
-Dimmer DM_HUE_LS "Dim Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
-Color  CL_HUE_LS "Color Lightstrip" [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Switch SW_HUE_LS "Status Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Dimmer DM_HUE_LS "Dim Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Color  CL_HUE_LS "Color Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
 
 // Deckenlampe
 // ------------------------------
 Group HUE_DL "Hue Deckenlampe" [Lighting]
-Switch SW_HUE_DL "Status Deckenlampe" [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
-Dimmer DM_HUE_DL "Dim Deckenlampe" [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
-Color  CL_HUE_DL "Color Deckenlampe" [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
+Switch SW_HUE_DL "Status Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
+Dimmer DM_HUE_DL "Dim Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
+Color  CL_HUE_DL "Color Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
 
 // Kleiderstange
 // ------------------------------
 Group HUE_KS "Hue Kleiderstange" [Lighting]
-Switch SW_HUE_KS "Status Kleiderstange" [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
-Dimmer DM_HUE_KS "Dim Kleiderstange" [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
-Color  CL_HUE_KS "Color Kleiderstange" [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Switch SW_HUE_KS "Status Kleiderstange" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Dimmer DM_HUE_KS "Dim Kleiderstange" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Color  CL_HUE_KS "Color Kleiderstange" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
 
 // Schreibtisch
 Group HUE_ST "Hue Schreibtisch" [Lighting]
 // ------------------------------
-Switch SW_HUE_ST "Status Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
-Dimmer DM_HUE_ST "Dim Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
-Color  CL_HUE_ST "Color Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Switch SW_HUE_ST "Status Schreibtisch" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Dimmer DM_HUE_ST "Dim Schreibtisch" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Color  CL_HUE_ST "Color Schreibtisch" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 
 // Control items
 Switch SW_HUE_ALL "All Lights" [Switchable] {channel=">[ON] >[OFF]"}
