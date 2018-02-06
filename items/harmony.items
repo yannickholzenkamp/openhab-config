@@ -4,5 +4,5 @@
 
 String HARMONY_LGTV "Fernseher" (gMain) { channel="harmonyhub:device:HarmonyHub:46066669:buttonPress" }
 String HARMONY_HKAVR "Harman Kardon AV Receiver" (gMain) { channel="harmonyhub:device:HarmonyHub:46066704:buttonPress" }
-String HARMONY_HKBRP "Harman Kardon Blu-Ray Player" (gMain) { channel="harmonyhub:device:HarmonyHub:46069118:buttonPress" }
 String HARMONY_APLTV "Apple TV (4. Gen)" (gMain) { channel="harmonyhub:device:HarmonyHub:46066735:buttonPress" }
+// String HARMONY_HKBRP "Harman Kardon Blu-Ray Player" (gMain) { channel="harmonyhub:device:HarmonyHub:46069118:buttonPress" }

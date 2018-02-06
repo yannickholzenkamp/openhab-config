@@ -3,13 +3,9 @@
 // ------------------------------
 
 
-rule "Power Apple TV on/off"
+rule "Play on Apple TV"
   when 
     Item SW_APLTV received command
   then
-    if (receivedCommand == ON) {
-        HARMONY_APLTV.sendCommand("Play")
-    } else {
-        HARMONY_APLTV.sendCommand("Stop")
-    }
+    HARMONY_APLTV.sendCommand("Play")
   end

@@ -8,8 +8,8 @@ rule "Power AVR on/off"
     Item SW_HKAVR received command
   then
     if (receivedCommand == ON) {
-        HarmonyTV.sendCommand("PowerOn")
+        HARMONY_HKAVR.sendCommand("PowerOn")
     } else {
-        HarmonyTV.sendCommand("PowerOff")
+        HARMONY_HKAVR.sendCommand("PowerOff")
     }
   end
