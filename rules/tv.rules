@@ -8,8 +8,8 @@ rule "Power TV on/off"
     Item SW_LGTV received command
   then
     if (receivedCommand == ON) {
-        HarmonyTV.sendCommand("PowerOn")
+        HARMONY_LGTV.sendCommand("PowerOn")
     } else {
-        HarmonyTV.sendCommand("PowerOff")
+        HARMONY_LGTV.sendCommand("PowerOff")
     }
   end

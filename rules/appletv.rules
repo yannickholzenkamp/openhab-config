@@ -8,8 +8,8 @@ rule "Power Apple TV on/off"
     Item SW_APLTV received command
   then
     if (receivedCommand == ON) {
-        HarmonyTV.sendCommand("PowerOn")
+        HARMONY_APLTV.sendCommand("Play")
     } else {
-        HarmonyTV.sendCommand("PowerOff")
+        HARMONY_APLTV.sendCommand("Stop")
     }
   end
