@@ -1,0 +1,15 @@
+// ------------------------------
+// Rules to control the lighting
+// ------------------------------
+
+
+rule "All lights on"
+  when 
+    Item SW_HUE_ALL received command
+  then
+    if (receivedCommand == ON) {
+        HARMONY_LGTV.sendCommand("ON")
+    } else {
+        HARMONY_LGTV.sendCommand("OFF")
+    }
+  end

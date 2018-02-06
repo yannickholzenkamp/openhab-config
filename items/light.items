@@ -25,3 +25,6 @@ Color  CL_HUE_KS "Hue Kleiderstange" [Lighting] {channel = "hue:0210:00178840e9b
 Switch SW_HUE_ST "Hue Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 Dimmer DM_HUE_ST "Hue Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 Color  CL_HUE_ST "Hue Schreibtisch" [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+
+//
+Switch SW_HUE_ALL "Lichter" [Switchable] {channel=">[ON] >[OFF]"}
