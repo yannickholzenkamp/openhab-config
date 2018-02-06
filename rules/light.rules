@@ -24,8 +24,8 @@ rule "Dim all lights"
   when 
     Item DM_HUE_ALL received command
   then
-    SW_HUE_LS.sendCommand(10)
-    SW_HUE_DL.sendCommand(50)
-    SW_HUE_ST.sendCommand(90)
-    SW_HUE_KS.sendCommand(75)
+    DM_HUE_LS.sendCommand(10)
+    DM_HUE_DL.sendCommand(50)
+    DM_HUE_ST.sendCommand(90)
+    DM_HUE_KS.sendCommand(75)
   end
