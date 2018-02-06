@@ -31,5 +31,5 @@ Dimmer DM_HUE_ST "Dim Schreibtisch" (HUE_ST) [Lighting] {channel = "hue:0210:001
 Color  CL_HUE_ST "Color Schreibtisch" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 
 // Control items
-Switch SW_HUE_ALL "All Lights" [Switchable] {channel=">[ON] >[OFF]"}
-Switch DM_HUE_ALL "Brightness" [Switchable] {channel=">[ON] >[OFF]"}
+Switch SW_HUE_ALL "All Lights" [Lighting] {channel=">[ON] >[OFF]"}
+Dimmer DM_HUE_ALL "Brightness" [Lighting]
