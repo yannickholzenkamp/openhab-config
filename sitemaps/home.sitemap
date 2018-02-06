@@ -4,7 +4,18 @@ sitemap home label="My Home" {
         Switch item=SW_HKAVR icon="receiver"
     }
     Frame label="Lighting" {
+
         Switch item=SW_HUE_LS icon="lightbulb"
         Slider item=DM_HUE_LS icon="lightbulb"
+
+        Switch item=SW_HUE_DL icon="lightbulb"
+        Slider item=DM_HUE_DL icon="lightbulb"
+
+        Switch item=SW_HUE_ST icon="lightbulb"
+        Slider item=DM_HUE_ST icon="lightbulb"
+
+        Switch item=SW_HUE_KS icon="lightbulb"
+        Slider item=DM_HUE_KS icon="lightbulb"
+
     }
 }
