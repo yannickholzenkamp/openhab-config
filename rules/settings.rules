@@ -20,11 +20,11 @@ rule "Nachtlicht"
     Item SW_SETTINGS_NACHTLICHT received command
   then
     if (receivedCommand == ON) {
-      HARMONY_APLTV.sendCommand("Home")
-      HARMONY_HKAVR.sendCommand("PowerOff")
-      HARMONY_LGTV.sendCommand("PowerOff")
-      CL_HUE_ALL.sendCommand("OFF")
-      CL_HUE_KS.sendCommand(25)
+      CL_HUE_DL.sendCommand("OFF")
+      CL_HUE_ST.sendCommand("OFF")
+      CL_HUE_KS.sendCommand("OFF")
+      CL_HUE_LS.sendCommand("ON")
+      CL_HUE_LS.sendCommand(40)
     } else {
       CL_HUE_ALL.sendCommand("OFF")
     }
@@ -35,11 +35,11 @@ rule "Leselampe"
     Item SW_SETTINGS_LESELAMPE received command
   then
     if (receivedCommand == ON) {
-      HARMONY_APLTV.sendCommand("Home")
-      HARMONY_HKAVR.sendCommand("PowerOff")
-      HARMONY_LGTV.sendCommand("PowerOff")
-      CL_HUE_ALL.sendCommand("OFF")
-      CL_HUE_LS.sendCommand(40)
+      CL_HUE_DL.sendCommand("OFF")
+      CL_HUE_ST.sendCommand("OFF")
+      CL_HUE_LS.sendCommand("OFF")
+      CL_HUE_KS.sendCommand("ON")
+      CL_HUE_KS.sendCommand(30)
     } else {
       CL_HUE_ALL.sendCommand("OFF")
     }
