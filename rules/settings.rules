@@ -22,9 +22,9 @@ rule "Nachtlicht"
     if (receivedCommand == ON) {
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
-      CL_HUE_KS.sendCommand("OFF")
-      CL_HUE_LS.sendCommand("ON")
-      CL_HUE_LS.sendCommand(40)
+      CL_HUE_LS.sendCommand("OFF")
+      CL_HUE_KS.sendCommand("ON")
+      CL_HUE_KS.sendCommand(40)
     } else {
       CL_HUE_ALL.sendCommand("OFF")
     }
@@ -37,9 +37,9 @@ rule "Leselampe"
     if (receivedCommand == ON) {
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
-      CL_HUE_LS.sendCommand("OFF")
-      CL_HUE_KS.sendCommand("ON")
-      CL_HUE_KS.sendCommand(30)
+      CL_HUE_KS.sendCommand("OFF")
+      CL_HUE_LS.sendCommand("ON")
+      CL_HUE_LS.sendCommand(30)
     } else {
       CL_HUE_ALL.sendCommand("OFF")
     }

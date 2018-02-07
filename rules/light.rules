@@ -20,7 +20,7 @@ rule "All lights on"
     }
   end
 
-rule "Dim all lights"
+rule "All lights"
   when 
     Item CL_HUE_ALL received command
   then
