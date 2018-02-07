@@ -2,7 +2,7 @@
 // Items to control lighting
 // ------------------------------
 
-Color  CL_HUE_ALL "Alle Lampen" [Lighting]
+Color  CL_HUE_ALL "Licht" [Lighting]
 Color  CL_HUE_LS "Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
 Color  CL_HUE_DL "Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
 Color  CL_HUE_KS "Kleiderstange" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
