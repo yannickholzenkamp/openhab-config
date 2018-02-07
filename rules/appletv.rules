@@ -2,7 +2,6 @@
 // Rules to control the HK AVR
 // ------------------------------
 
-
 rule "Play on Apple TV"
   when 
     Item SW_APLTV received command

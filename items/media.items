@@ -3,25 +3,7 @@
 // ------------------------------
 
 
-// TV
-// ------------------------------
 Switch SW_LGTV "TV" [Switchable] {channel=">[ON] >[OFF]"}
-// ------------------------------
-
-
-// APPLE TV
-// ------------------------------
 Switch SW_APLTV "Apple TV" [Switchable] {channel=">[ON] >[OFF]"}
-// ------------------------------
-
-
-// HARMAN KARDON AV RECEIVER
-// ------------------------------
 Switch SW_HKAVR "HK AVR" [Switchable] {channel=">[ON] >[OFF]"}
-// ------------------------------
-
-
-// HARMAN KARDON BLURAY PLAYER
-// ------------------------------
 // Switch SW_HKBRP "HK BRP" [Switchable] {channel=">[ON] >[OFF]"}
-// ------------------------------

@@ -1,0 +1,1 @@
+Switch SW_SETTINGS_FERNSEHEN "Fernsehen" [Switchable] {channel=">[ON] >[OFF]"}
