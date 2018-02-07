@@ -1,0 +1,28 @@
+rule "Power TV on/off"
+  when 
+    Item SW_LGTV received command
+  then
+    if (receivedCommand == ON) {
+        HARMONY_LGTV.sendCommand("PowerOn")
+    } else {
+        HARMONY_LGTV.sendCommand("PowerOff")
+    }
+  end
+
+rule "Power AVR on/off"
+  when 
+    Item SW_HKAVR received command
+  then
+    if (receivedCommand == ON) {
+        HARMONY_HKAVR.sendCommand("PowerOn")
+    } else {
+        HARMONY_HKAVR.sendCommand("PowerOff")
+    }
+  end
+
+rule "Play on Apple TV"
+  when 
+    Item SW_APLTV received command
+  then
+    HARMONY_APLTV.sendCommand("Play")
+  end

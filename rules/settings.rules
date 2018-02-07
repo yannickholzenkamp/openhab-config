@@ -3,14 +3,44 @@ rule "Fernsehen an, Lichter dimmen"
     Item SW_SETTINGS_FERNSEHEN received command
   then
     if (receivedCommand == ON) {
-      //HARMONY_APLTV.sendCommand("Home")
+      HARMONY_APLTV.sendCommand("Home")
       HARMONY_HKAVR.sendCommand("PowerOn")
       HARMONY_LGTV.sendCommand("PowerOn")
       CL_HUE_ALL.sendCommand(20)
     } else {
-      //HARMONY_APLTV.sendCommand("Home")
+      HARMONY_APLTV.sendCommand("Home")
       HARMONY_HKAVR.sendCommand("PowerOff")
       HARMONY_LGTV.sendCommand("PowerOff")
       CL_HUE_ALL.sendCommand(100)
+    }
+  end
+
+rule "Nachtlicht"
+  when 
+    Item SW_SETTINGS_NACHTLICHT received command
+  then
+    if (receivedCommand == ON) {
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      HARMONY_LGTV.sendCommand("PowerOff")
+      CL_HUE_ALL.sendCommand("OFF")
+      CL_HUE_KS.sendCommand(25)
+    } else {
+      CL_HUE_ALL.sendCommand("OFF")
+    }
+  end
+
+rule "Leselampe"
+  when 
+    Item SW_SETTINGS_LESELAMPE received command
+  then
+    if (receivedCommand == ON) {
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      HARMONY_LGTV.sendCommand("PowerOff")
+      CL_HUE_ALL.sendCommand("OFF")
+      CL_HUE_LS.sendCommand(40)
+    } else {
+      CL_HUE_ALL.sendCommand("OFF")
     }
   end

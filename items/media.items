@@ -2,7 +2,6 @@
 // Items to control media devices
 // ------------------------------
 
-
 Switch SW_LGTV "TV" [Switchable] {channel=">[ON] >[OFF]"}
 Switch SW_APLTV "Apple TV" [Switchable] {channel=">[ON] >[OFF]"}
 Switch SW_HKAVR "HK AVR" [Switchable] {channel=">[ON] >[OFF]"}

@@ -1,8 +1,12 @@
 sitemap home label="My Home" {
+
     Frame label="Media Devices" {
+
         Switch item=SW_LGTV icon="screen"
         Switch item=SW_HKAVR icon="receiver"
+
     }
+
     Frame label="Lighting" {
 
         Switch item=CL_HUE_ALL icon="lightbulb"
@@ -25,4 +29,13 @@ sitemap home label="My Home" {
         }
 
     }
+
+    Frame label="Settings" {
+
+        Switch item=SW_SETTINGS_FERNSEHEN icon="screen"
+        Switch item=SW_SETTINGS_NACHTLICHT icon="lightbulb"
+        Switch item=SW_SETTINGS_LESELAMPE icon="lightbulb"
+        
+    }
+
 }

@@ -1,1 +1,7 @@
+// ------------------------------
+// Items for alexa
+// ------------------------------
+
 Switch SW_SETTINGS_FERNSEHEN "Fernsehen" [Switchable] {channel=">[ON] >[OFF]"}
+Switch SW_SETTINGS_NACHTLICHT "Nachtlicht" [Switchable] {channel=">[ON] >[OFF]"}
+Switch SW_SETTINGS_LESELAMPE "Leselampe" [Switchable] {channel=">[ON] >[OFF]"}
