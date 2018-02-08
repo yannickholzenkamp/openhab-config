@@ -1,7 +1,8 @@
+import java.awt.Color;
+
 // ------------------------------
 // Rules to control the lighting
 // ------------------------------
-
 
 rule "All lights on"
   when 
