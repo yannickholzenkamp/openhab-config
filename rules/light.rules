@@ -24,7 +24,7 @@ rule "All lights"
     Item CL_HUE_ALL received command
   then
     if (receivedCommand == ON) {
-      var DecimalType hue = new DecimalType(330)
+      var DecimalType hue = new DecimalType(30)
 			var PercentType sat = new PercentType(100)
 			var PercentType bright = new PercentType(100) 
       CL_HUE_LS.sendCommand(new HSBType(hue,sat,bright))
