@@ -1,5 +1,3 @@
-import java.awt.Color;
-
 // ------------------------------
 // Rules to control the lighting
 // ------------------------------
@@ -26,14 +24,13 @@ rule "All lights"
     Item CL_HUE_ALL received command
   then
     if (receivedCommand == ON) {
-      CL_HUE_LS.sendCommand(new HSBType(Color.ORANGE))
-      CL_HUE_DL.sendCommand(new HSBType(Color.ORANGE))
-      CL_HUE_ST.sendCommand(new HSBType(Color.ORANGE))
-      CL_HUE_KS.sendCommand(new HSBType(Color.ORANGE))
-      CL_HUE_LS.sendCommand(100)
-      CL_HUE_DL.sendCommand(100)
-      CL_HUE_ST.sendCommand(100)
-      CL_HUE_KS.sendCommand(100)
+      var DecimalType hue = new DecimalType(330)
+			var PercentType sat = new PercentType(100)
+			var PercentType bright = new PercentType(100) 
+      CL_HUE_LS.sendCommand(new HSBType(hue,sat,bright))
+      CL_HUE_DL.sendCommand(new HSBType(hue,sat,bright))
+      CL_HUE_ST.sendCommand(new HSBType(hue,sat,bright))
+      CL_HUE_KS.sendCommand(new HSBType(hue,sat,bright))
     } else {
       CL_HUE_LS.sendCommand(receivedCommand)
       CL_HUE_DL.sendCommand(receivedCommand)
