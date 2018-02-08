@@ -24,8 +24,19 @@ rule "All lights"
   when 
     Item CL_HUE_ALL received command
   then
-    CL_HUE_LS.sendCommand(receivedCommand)
-    CL_HUE_DL.sendCommand(receivedCommand)
-    CL_HUE_ST.sendCommand(receivedCommand)
-    CL_HUE_KS.sendCommand(receivedCommand)
+    if (receivedCommand == ON) {
+      CL_HUE_LS.sendCommand(new HSBType(Color.ORANGE))
+      CL_HUE_DL.sendCommand(new HSBType(Color.ORANGE))
+      CL_HUE_ST.sendCommand(new HSBType(Color.ORANGE))
+      CL_HUE_KS.sendCommand(new HSBType(Color.ORANGE))
+      CL_HUE_LS.sendCommand(100)
+      CL_HUE_DL.sendCommand(100)
+      CL_HUE_ST.sendCommand(100)
+      CL_HUE_KS.sendCommand(100)
+    } else {
+      CL_HUE_LS.sendCommand(receivedCommand)
+      CL_HUE_DL.sendCommand(receivedCommand)
+      CL_HUE_ST.sendCommand(receivedCommand)
+      CL_HUE_KS.sendCommand(receivedCommand)
+    }
   end

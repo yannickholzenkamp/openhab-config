@@ -3,6 +3,8 @@ rule "Fernsehen an, Lichter dimmen"
     Item SW_SETTINGS_FERNSEHEN received command
   then
     if (receivedCommand == ON) {
+      SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
+      SW_SETTINGS_LESELAMPE.sendCommand("OFF")
       HARMONY_APLTV.sendCommand("Home")
       HARMONY_HKAVR.sendCommand("PowerOn")
       HARMONY_LGTV.sendCommand("PowerOn")
@@ -20,6 +22,8 @@ rule "Nachtlicht"
     Item SW_SETTINGS_NACHTLICHT received command
   then
     if (receivedCommand == ON) {
+      SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
+      SW_SETTINGS_LESELAMPE.sendCommand("OFF")
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
       CL_HUE_LS.sendCommand("OFF")
@@ -35,6 +39,8 @@ rule "Leselampe"
     Item SW_SETTINGS_LESELAMPE received command
   then
     if (receivedCommand == ON) {
+      SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
+      SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
       CL_HUE_KS.sendCommand("OFF")
