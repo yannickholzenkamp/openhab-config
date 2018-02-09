@@ -4,5 +4,5 @@
 
 Switch SW_LGTV "TV" [Switchable] {channel=">[ON] >[OFF]"}
 Switch SW_APLTV "Apple TV" [Switchable] {channel=">[ON] >[OFF]"}
-Switch SW_HKAVR "HK AVR" [Switchable] {channel=">[ON] >[OFF]"}
+Switch SW_HKAVR "Receiver" [Switchable] {channel=">[ON] >[OFF]"}
 // Switch SW_HKBRP "HK BRP" [Switchable] {channel=">[ON] >[OFF]"}

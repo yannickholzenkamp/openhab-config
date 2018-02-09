@@ -3,8 +3,10 @@ rule "Fernsehen an, Lichter dimmen"
     Item SW_SETTINGS_FERNSEHEN received command
   then
     if (receivedCommand == ON) {
+      // Turn other settings off
       SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
       SW_SETTINGS_LESELAMPE.sendCommand("OFF")
+      // Turn TV, AVR & Apple TV on
       HARMONY_APLTV.sendCommand("Home")
       HARMONY_HKAVR.sendCommand("PowerOn")
       HARMONY_LGTV.sendCommand("PowerOn")
@@ -22,13 +24,18 @@ rule "Nachtlicht"
     Item SW_SETTINGS_NACHTLICHT received command
   then
     if (receivedCommand == ON) {
-      //SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-      //SW_SETTINGS_LESELAMPE.sendCommand("OFF")
+      // Turn other settings off
+      SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
+      SW_SETTINGS_LESELAMPE.sendCommand("OFF")
+      // Turn other lamps off
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
       CL_HUE_LS.sendCommand("OFF")
-      CL_HUE_KS.sendCommand("ON")
-      CL_HUE_KS.sendCommand(40)
+      // Turn kleiderstange on
+      var DecimalType color = new DecimalType(40)
+			var PercentType sat = new PercentType(100)
+			var PercentType brightness = new PercentType(50) 
+      CL_HUE_KS.sendCommand(new HSBType(color,sat,brightness))
     } else {
       CL_HUE_ALL.sendCommand("OFF")
     }
@@ -40,18 +47,16 @@ rule "Leselampe"
   then
     if (receivedCommand == ON) {
       // Turn other settings off
-      //SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
-      //SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-
+      SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
+      SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
       // Turn other lamps off
       CL_HUE_DL.sendCommand("OFF")
       CL_HUE_ST.sendCommand("OFF")
       CL_HUE_KS.sendCommand("OFF")
-
       // Turn lightstrip on
       var DecimalType color = new DecimalType(40)
 			var PercentType sat = new PercentType(100)
-			var PercentType brightness = new PercentType(100) 
+			var PercentType brightness = new PercentType(50) 
       CL_HUE_LS.sendCommand(new HSBType(color,sat,brightness))
     } else {
       CL_HUE_ALL.sendCommand("OFF")
