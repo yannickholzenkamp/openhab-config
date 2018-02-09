@@ -41,10 +41,9 @@ rule "Leselampe"
     if (receivedCommand == ON) {
       SW_SETTINGS_NACHTLICHT.sendCommand("OFF")
       SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-      CL_HUE_DL.sendCommand("OFF")
-      CL_HUE_ST.sendCommand("OFF")
-      CL_HUE_KS.sendCommand("OFF")
-      CL_HUE_LS.sendCommand("ON")
+      CL_HUE_DL.sendCommand(0)
+      CL_HUE_ST.sendCommand(0)
+      CL_HUE_KS.sendCommand(0)
       CL_HUE_LS.sendCommand(30)
     } else {
       CL_HUE_ALL.sendCommand("OFF")

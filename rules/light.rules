@@ -24,13 +24,13 @@ rule "All lights"
     Item CL_HUE_ALL received command
   then
     if (receivedCommand == ON) {
-      var DecimalType hue = new DecimalType(40)
+      var DecimalType color = new DecimalType(40)
 			var PercentType sat = new PercentType(100)
-			var PercentType bright = new PercentType(100) 
-      CL_HUE_LS.sendCommand(new HSBType(hue,sat,bright))
-      CL_HUE_DL.sendCommand(new HSBType(hue,sat,bright))
-      CL_HUE_ST.sendCommand(new HSBType(hue,sat,bright))
-      CL_HUE_KS.sendCommand(new HSBType(hue,sat,bright))
+			var PercentType brightness = new PercentType(100) 
+      CL_HUE_LS.sendCommand(new HSBType(color,sat,brightness))
+      CL_HUE_DL.sendCommand(new HSBType(color,sat,brightness))
+      CL_HUE_ST.sendCommand(new HSBType(color,sat,brightness))
+      CL_HUE_KS.sendCommand(new HSBType(color,sat,brightness))
     } else {
       CL_HUE_LS.sendCommand(receivedCommand)
       CL_HUE_DL.sendCommand(receivedCommand)
