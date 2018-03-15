@@ -12,7 +12,7 @@ rule "All lights"
     CL_HUE_SF.sendCommand(receivedCommand)
   end
 
-rule "Wohnzimmer"
+rule "Wohnzimmerlicht an/aus"
   when 
     Item SW_SETTINGS_WOHNZIMMER received command
   then
@@ -28,7 +28,7 @@ rule "Wohnzimmer"
     }
   end
 
-rule "Schlafzimmer"
+rule "Schlafzimmerlicht an/aus"
   when 
     Item SW_SETTINGS_SCHLAFZIMMER received command
   then
@@ -44,7 +44,7 @@ rule "Schlafzimmer"
     }
   end
 
-rule "Küche"
+rule "Küchenlicht an/aus"
   when 
     Item SW_SETTINGS_KUECHE received command
   then
