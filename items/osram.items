@@ -2,4 +2,4 @@
 // Osram smart home devices
 // ------------------------------
 
-Switchable  SW_OSRAM_1 "Osram" [Switchable] {channel = "hue:0010:00178840e9b7:6:switch"}
+Switchable  SW_OSRAM_1 "Küchenlicht" [Switchable] {channel = "hue:0010:00178840e9b7:6:switch"}

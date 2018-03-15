@@ -27,10 +27,3 @@ rule "Schlafzimmerlicht an/aus"
     CL_HUE_LS.sendCommand(receivedCommand)
     CL_HUE_SZ.sendCommand(receivedCommand)
   end
-
-rule "Küchenlicht an/aus"
-  when 
-    Item SW_SETTINGS_KUECHE received command
-  then
-    SW_OSRAM_1.sendCommand(receivedCommand)
-  end
