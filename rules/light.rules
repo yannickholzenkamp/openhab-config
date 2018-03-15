@@ -43,3 +43,10 @@ rule "Schlafzimmer"
       CL_HUE_SZ.sendCommand("OFF")
     }
   end
+
+rule "Küche"
+  when 
+    Item SW_SETTINGS_KUECHE received command
+  then
+    SW_OSRAM_1.sendCommand(receivedCommand)
+  end

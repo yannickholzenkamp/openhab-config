@@ -10,3 +10,4 @@ Color  CL_HUE_WZ "Wohnzimmerlampe" (HUE_ST) [Lighting] {channel = "hue:0210:0017
 
 Color CL_SETTINGS_WOHNZIMMER "Wohnzimmer" [Lighting] 
 Color CL_SETTINGS_SCHLAFZIMMER "Schlafzimmer" [Lighting]
+Switch SW_SETTINGS_KUECHE "Küche" [Switchable]
