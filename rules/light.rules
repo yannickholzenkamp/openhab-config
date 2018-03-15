@@ -16,32 +16,16 @@ rule "Wohnzimmerlicht an/aus"
   when 
     Item SW_SETTINGS_WOHNZIMMER received command
   then
-    if (receivedCommand == ON) {
-      var DecimalType color = new DecimalType(40)
-			var PercentType sat = new PercentType(100)
-			var PercentType brightness = new PercentType(50) 
-      CL_HUE_WZ.sendCommand(new HSBType(color,sat,brightness))
-      CL_HUE_SF.sendCommand(new HSBType(color,sat,brightness))
-    } else {
-      CL_HUE_WZ.sendCommand("OFF")
-      CL_HUE_SF.sendCommand("OFF")
-    }
+    CL_HUE_WZ.sendCommand(receivedCommand)
+    CL_HUE_SF.sendCommand(receivedCommand)
   end
 
 rule "Schlafzimmerlicht an/aus"
   when 
     Item SW_SETTINGS_SCHLAFZIMMER received command
   then
-    if (receivedCommand == ON) {
-      var DecimalType color = new DecimalType(40)
-			var PercentType sat = new PercentType(100)
-			var PercentType brightness = new PercentType(50) 
-      CL_HUE_LS.sendCommand(new HSBType(color,sat,brightness))
-      CL_HUE_SZ.sendCommand(new HSBType(color,sat,brightness))
-    } else {
-      CL_HUE_LS.sendCommand("OFF")
-      CL_HUE_SZ.sendCommand("OFF")
-    }
+    CL_HUE_LS.sendCommand(receivedCommand)
+    CL_HUE_SZ.sendCommand(receivedCommand)
   end
 
 rule "Küchenlicht an/aus"

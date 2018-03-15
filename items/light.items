@@ -8,6 +8,6 @@ Color  CL_HUE_SZ "Schlafzimmerlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00
 Color  CL_HUE_SF "Sofalampe" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
 Color  CL_HUE_WZ "Wohnzimmerlampe" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 
-Color CL_SETTINGS_WOHNZIMMER "Wohnzimmer" [Lighting] 
-Color CL_SETTINGS_SCHLAFZIMMER "Schlafzimmer" [Lighting]
-Switch SW_SETTINGS_KUECHE "Küche" [Switchable]
+Color CL_SETTINGS_WOHNZIMMER "Wohnzimmerlicht" [Lighting] 
+Color CL_SETTINGS_SCHLAFZIMMER "Schlafzimmerlicht" [Lighting]
+Switch SW_SETTINGS_KUECHE "Küchenlicht" [Switchable]
