@@ -5,22 +5,28 @@ sitemap home label="Zuhause" {
         Switch item=SW_LGTV icon="screen"
         Switch item=SW_HKAVR icon="receiver"
         Switch item=CL_HUE_WZ icon="lightbulb"
+        Slider item=CL_HUE_WZ icon="lightbulb"
 
     }
 
-    Frame label="Lighting" {
+    Frame label="Küche" {
 
-        Switch item=CL_HUE_ALL icon="lightbulb"
-        Slider item=CL_HUE_ALL icon="lightbulb"
+        Switch item=SW_OSRAM_KU icon="lightbulb"
 
     }
 
-    Frame label="Settings" {
+    Frame label="Flur" {
 
-        Switch item=SW_SETTINGS_FERNSEHEN icon="screen"
-        Switch item=SW_SETTINGS_NACHTLICHT icon="lightbulb"
-        Switch item=SW_SETTINGS_LESELAMPE icon="lightbulb"
+        Switch item=CL_HUE_FL icon="lightbulb"
+        Slider item=CL_HUE_FL icon="lightbulb"
         
+    }
+
+    Frame label="Schlafzimmer" {
+
+        Switch item=CL_SETTINGS_SCHLAFZIMMER icon="lightbulb"
+        Slider item=CL_SETTINGS_SCHLAFZIMMER icon="lightbulb"
+
     }
 
 }
