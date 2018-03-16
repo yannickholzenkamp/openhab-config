@@ -14,7 +14,7 @@ rule "All lights"
 
 rule "Schlafzimmerlicht an/aus"
   when 
-    Item SW_SETTINGS_SCHLAFZIMMER received command
+    Item CL_SETTINGS_SCHLAFZIMMER received command
   then
     CL_HUE_LS.sendCommand(receivedCommand)
     CL_HUE_SZ.sendCommand(receivedCommand)
