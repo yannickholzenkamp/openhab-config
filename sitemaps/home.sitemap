@@ -11,7 +11,7 @@ sitemap home label="Zuhause" {
 
     Frame label="Küche" {
 
-        Switch item=SW_OSRAM_KU icon="lightbulb"
+        Switch item=SW_OSRAM_KU label="Licht" icon="lightbulb"
 
     }
 
