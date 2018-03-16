@@ -6,6 +6,7 @@ sitemap home label="Zuhause" {
         Switch item=SW_HKAVR label="AV Receiver" icon="receiver"
         Switch item=CL_HUE_WZ label="Licht" icon="lightbulb"
         Slider item=CL_HUE_WZ label="Dimmer" icon="lightbulb"
+        Colorpicker item=CL_HUE_WZ label="Lichtfarbe" icon="lightbulb"
 
     }
 
@@ -19,6 +20,7 @@ sitemap home label="Zuhause" {
 
         Switch item=CL_HUE_FL label="Licht" icon="lightbulb"
         Slider item=CL_HUE_FL label="Dimmer" icon="lightbulb"
+        Colorpicker item=CL_HUE_FL label="Lichtfarbe" icon="lightbulb"
         
     }
 
@@ -26,6 +28,7 @@ sitemap home label="Zuhause" {
 
         Switch item=CL_SETTINGS_SCHLAFZIMMER label="Licht" icon="lightbulb"
         Slider item=CL_SETTINGS_SCHLAFZIMMER label="Dimmer" icon="lightbulb"
+        Colorpicker item=CL_SETTINGS_SCHLAFZIMMER label="Lichtfarbe" icon="lightbulb"
 
     }
 
