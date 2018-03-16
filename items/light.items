@@ -5,8 +5,7 @@
 Color  CL_HUE_ALL "Alle Lampen" [Lighting]
 Color  CL_HUE_LS "Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
 Color  CL_HUE_SZ "Schlafzimmerlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
-Color  CL_HUE_SF "Sofalampe" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Color  CL_HUE_FL "Flurlampe" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
 Color  CL_HUE_WZ "Wohnzimmerlampe" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
 
-Color CL_SETTINGS_WOHNZIMMER "Wohnzimmerlicht" [Lighting] 
 Color CL_SETTINGS_SCHLAFZIMMER "Schlafzimmerlicht" [Lighting]
