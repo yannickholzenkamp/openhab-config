@@ -1,9 +1,10 @@
-sitemap home label="My Home" {
+sitemap home label="Zuhause" {
 
-    Frame label="Media Devices" {
+    Frame label="Wohnzimmer" {
 
         Switch item=SW_LGTV icon="screen"
         Switch item=SW_HKAVR icon="receiver"
+        Switch item=CL_HUE_WZ icon="lightbulb"
 
     }
 
@@ -11,22 +12,6 @@ sitemap home label="My Home" {
 
         Switch item=CL_HUE_ALL icon="lightbulb"
         Slider item=CL_HUE_ALL icon="lightbulb"
-
-        Text item=LIGHTS label="Lighting Settings" icon="lightbulb" {
-
-            Switch item=CL_HUE_LS icon="lightbulb"
-            Slider item=CL_HUE_LS icon="lightbulb"
-
-            Switch item=CL_HUE_DL icon="lightbulb"
-            Slider item=CL_HUE_DL icon="lightbulb"
-
-            Switch item=CL_HUE_ST icon="lightbulb"
-            Slider item=CL_HUE_ST icon="lightbulb"
-
-            Switch item=CL_HUE_KS icon="lightbulb"
-            Slider item=CL_HUE_KS icon="lightbulb"
-
-        }
 
     }
 
