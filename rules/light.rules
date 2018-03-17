@@ -20,7 +20,7 @@ rule "Schlafzimmerlicht an/aus"
     CL_HUE_SZ.sendCommand(receivedCommand)
   end
 
-  rule "Schlafzimmerlicht an/aus"
+  rule "Wohnzimmerlicht an/aus"
   when 
     Item CL_SETTINGS_WOHNZIMMER received command
   then
