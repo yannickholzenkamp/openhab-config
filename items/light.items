@@ -9,11 +9,10 @@ Color CL_SETTINGS_SCHLAFZIMMER "Schlafzimmerlicht" [Lighting]
 Color  CL_HUE_LS "Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
 Color  CL_HUE_SZ "Schlafzimmer Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
 
-// Flur
-Color  CL_HUE_FL "Flurlicht" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
-
 // Wohnzimmer
-Color  CL_HUE_WZ "Wohnzimmerlicht" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Color CL_SETTINGS_WOHNZIMMER "Wohnzimmerlicht" [Lighting]
+Color  CL_HUE_WZ "Wohnzimmerlampe" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Color  CL_HUE_SF "Sofalampe" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
 
 // Küche
 Switch  SW_OSRAM_KU "Küchenlicht" [Switchable] {channel = "hue:0010:00178840e9b7:6:switch"}
