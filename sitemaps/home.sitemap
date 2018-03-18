@@ -16,14 +16,6 @@ sitemap home label="Zuhause" {
 
     }
 
-    Frame label="Flur" {
-
-        Switch item=CL_HUE_FL label="Licht" icon="lightbulb"
-        Slider item=CL_HUE_FL label="Dimmer" icon="lightbulb"
-        Colorpicker item=CL_HUE_FL label="Lichtfarbe" icon="lightbulb"
-        
-    }
-
     Frame label="Schlafzimmer" {
 
         Switch item=CL_SETTINGS_SCHLAFZIMMER label="Licht" icon="lightbulb"
