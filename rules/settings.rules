@@ -16,4 +16,26 @@ rule "Fernsehen an, Lichter dimmen"
     }
   end
 
+rule "Feuer an"
+  when 
+    Item SW_SETTINGS_FEUER received command
+  then
+    if (receivedCommand == ON) {
+      // Turn TV, AVR & Apple TV on
+      HARMONY_HKAVR.sendCommand("PowerOn")
+      HARMONY_LGTV.sendCommand("PowerOn")
+      CL_SETTINGS_WOHNZIMMER.sendCommand(20)
+      // Turn Music on
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_APLTV.sendCommand("Menu")
+      HARMONY_APLTV.sendCommand("DirectionDown")
+      HARMONY_APLTV.sendCommand("DirectionDown")
+      HARMONY_APLTV.sendCommand("DirectionRight")
+      HARMONY_APLTV.sendCommand("Select")
+    } else {
+      // Do nothing
+    }
+  end
+
 
