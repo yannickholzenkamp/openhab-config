@@ -28,8 +28,6 @@ rule "Feuer an"
       // Turn Music on
       HARMONY_APLTV.sendCommand("Home")
       HARMONY_APLTV.sendCommand("Home")
-      HARMONY_APLTV.sendCommand("Home")
-      HARMONY_APLTV.sendCommand("Menu")
       HARMONY_APLTV.sendCommand("DirectionDown")
       HARMONY_APLTV.sendCommand("DirectionDown")
       HARMONY_APLTV.sendCommand("DirectionDown")
