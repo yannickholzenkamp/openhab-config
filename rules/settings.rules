@@ -32,6 +32,7 @@ rule "Feuer an"
       HARMONY_APLTV.sendCommand("Menu")
       HARMONY_APLTV.sendCommand("DirectionDown")
       HARMONY_APLTV.sendCommand("DirectionDown")
+      HARMONY_APLTV.sendCommand("DirectionDown")
       HARMONY_APLTV.sendCommand("DirectionRight")
       HARMONY_APLTV.sendCommand("Select")
     } else {
