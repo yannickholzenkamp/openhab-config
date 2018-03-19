@@ -1,6 +1,24 @@
-rule "Fernsehen an, Lichter dimmen"
+rule "Fernsehen an, Lichter dimmen 1"
   when 
     Item SW_SETTINGS_FERNSEHEN received command
+  then
+    if (receivedCommand == ON) {
+      // Turn TV, AVR & Apple TV on
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_HKAVR.sendCommand("PowerOn")
+      HARMONY_LGTV.sendCommand("PowerOn")
+      CL_SETTINGS_WOHNZIMMER.sendCommand(20)
+    } else {
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      HARMONY_LGTV.sendCommand("PowerOff")
+      CL_SETTINGS_WOHNZIMMER.sendCommand(100)
+    }
+  end
+
+rule "Fernsehen an, Lichter dimmen 2"
+  when 
+    Item SW_SETTINGS_FERNSEHER received command
   then
     if (receivedCommand == ON) {
       // Turn TV, AVR & Apple TV on

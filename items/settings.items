@@ -3,4 +3,5 @@
 // ------------------------------
 
 Switch SW_SETTINGS_FERNSEHEN "Fernsehen" [Switchable] {channel=">[ON] >[OFF]"}
+Switch SW_SETTINGS_FERNSEHER "Fernseher" [Switchable] {channel=">[ON] >[OFF]"}
 Switch SW_SETTINGS_FEUER "Feuer" [Switchable] {channel=">[ON] >[OFF]"}
