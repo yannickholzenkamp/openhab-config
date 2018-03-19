@@ -10,9 +10,9 @@ sitemap home label="Zuhause" {
 
     }
 
-    Frame label="Küche" {
+    Frame label="Flur" {
 
-        Switch item=SW_OSRAM_KU label="Licht" icon="lightbulb"
+        Switch item=DM_HUE_FL label="Licht" icon="lightbulb"
 
     }
 
@@ -21,6 +21,12 @@ sitemap home label="Zuhause" {
         Switch item=CL_SETTINGS_SCHLAFZIMMER label="Licht" icon="lightbulb"
         Slider item=CL_SETTINGS_SCHLAFZIMMER label="Dimmer" icon="lightbulb"
         Colorpicker item=CL_SETTINGS_SCHLAFZIMMER label="Lichtfarbe" icon="lightbulb"
+
+    }
+
+    Frame label="Küche" {
+
+        Switch item=SW_OSRAM_KU label="Licht" icon="lightbulb"
 
     }
 

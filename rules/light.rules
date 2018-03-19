@@ -10,6 +10,8 @@ rule "All lights"
     CL_HUE_SZ.sendCommand(receivedCommand)
     CL_HUE_WZ.sendCommand(receivedCommand)
     CL_HUE_SF.sendCommand(receivedCommand)
+    SW_OSRAM_KU.sendCommand(receivedCommand)
+    DM_HUE_FL.sendCommand(receivedCommand)
   end
 
 rule "Schlafzimmerlicht an/aus"
