@@ -1,5 +1,12 @@
 sitemap home label="Zuhause" {
 
+    Frame label="Szenen" {
+
+        Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
+        Switch item=CL_HUE_ALL label="Alle Lampen" icon="lightbulb"
+
+    }
+
     Frame label="Wohnzimmer" {
 
         Switch item=SW_LGTV label="Fernseher" icon="screen"
@@ -13,6 +20,7 @@ sitemap home label="Zuhause" {
     Frame label="Flur" {
 
         Switch item=DM_HUE_FL label="Licht" icon="lightbulb"
+        Slider item=DM_HUE_FL label="Dimmer" icon="lightbulb"
 
     }
 
