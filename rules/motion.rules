@@ -1,15 +1,23 @@
-var Timer delay= null
-rule "Motion_Sensor"
+rule "HUE_MOTION_FLUR"
     when
-    	Item Motion_Sensor changed
+    	Item HUE_MOTION_FLUR changed
     then
-        logError("motion.rules", "Motion sensor presence detected")
-      if(Motion_Sensor.state == ON){
+      logInfo("motion.rules", "Motion sensor presence detected")
+      if(HUE_MOTION_FLUR.state == ON){
         CL_HUE_WZ.sendCommand(0)
         
-         //Turn off the light after 60 seconds
-         delay = createTimer(now.plusSeconds(60)) [|
-		CL_HUE_WZ.sendCommand(100)	
-	]
+        createTimer(now.plusSeconds(10)) [|
+            CL_HUE_WZ.sendCommand(100)	
+            OSRAM_KUECHE_STRIP.sendCommand("ON")
+        ]
+
+        createTimer(now.plusSeconds(30)) [|
+            CL_HUE_WZ.sendCommand(0)	
+            OSRAM_KUECHE_STRIP.sendCommand("OFF")
+        ]
+
+        createTimer(now.plusSeconds(60)) [|
+            CL_HUE_WZ.sendCommand(100)	
+        ]
 }
 end

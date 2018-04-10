@@ -1,0 +1,2 @@
+// Küche - Lightstrip
+Switch  OSRAM_KUECHE_STRIP  "Küchenlicht"   [Switchable]    {channel = "hue:0010:00178840e9b7:6:switch"}

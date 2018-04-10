@@ -1,6 +1,6 @@
 sitemap home label="Zuhause" {
 
-    Text 	item=HUE_Temp
+    Text item=HUE_TEMP
 
     Frame label="Szenen" {
 
@@ -11,8 +11,8 @@ sitemap home label="Zuhause" {
 
     Frame label="Wohnzimmer" {
 
-        Switch item=SW_LGTV label="Fernseher" icon="screen"
-        Switch item=SW_HKAVR label="AV Receiver" icon="receiver"
+        Switch item=SWITCH_LGTV label="Fernseher" icon="screen"
+        Switch item=SWITCH_HKAVR label="AV Receiver" icon="receiver"
         Switch item=CL_HUE_WZ label="Licht" icon="lightbulb"
         Slider item=CL_HUE_WZ label="Dimmer" icon="lightbulb"
         Colorpicker item=CL_HUE_WZ label="Lichtfarbe" icon="lightbulb"
@@ -36,7 +36,7 @@ sitemap home label="Zuhause" {
 
     Frame label="Küche" {
 
-        Switch item=SW_OSRAM_KU label="Licht" icon="lightbulb"
+        Switch item=OSRAM_KUECHE_STRIP label="Licht" icon="lightbulb"
 
     }
 

@@ -1,2 +1,0 @@
-Switch 	Motion_Sensor	<present>	(gSkur)	{ http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/7:500:JS(getHueMotionEvent.js)]" }
-Number	HUE_Temp 	"Skur temp [%.2f °C]"	<temperature>	(gSkur)	{ http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/6:300000:JS(getHueTemperature.js)]" }
