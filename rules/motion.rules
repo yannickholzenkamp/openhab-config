@@ -3,12 +3,13 @@ rule "Motion_Sensor"
     when
     	Item Motion_Sensor changed
     then
+        logError("motion.rules", "Motion sensor presence detected")
       if(Motion_Sensor.state == ON){
-        CL_HUE_WZ.sendCommand(100)
+        CL_HUE_WZ.sendCommand(0)
         
          //Turn off the light after 60 seconds
          delay = createTimer(now.plusSeconds(60)) [|
-		CL_HUE_WZ.sendCommand(0)	
+		CL_HUE_WZ.sendCommand(100)	
 	]
 }
 end
