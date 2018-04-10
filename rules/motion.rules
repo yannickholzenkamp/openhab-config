@@ -2,16 +2,20 @@ rule "HUE_MOTION_FLUR"
     when
     	Item Hue_Motion_Flur changed
     then
-      logInfo("motion.rules", "Flur Motion sensor presence detected")
+      logInfo("motion.rules", "Flur Bewegungsmelder aktiviert")
+      logInfo("motion.rules", Hue_Motion_Flur.state)
       if(Hue_Motion_Flur.state == ON){
         DM_HUE_FL.sendCommand(100)
+        logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 100%")
         
         createTimer(now.plusSeconds(30)) [|
             DM_HUE_FL.sendCommand(50)
+            logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 50%")
         ]
 
         createTimer(now.plusSeconds(60)) [|
             DM_HUE_FL.sendCommand(0)
+            logInfo("motion.rules", "Flurlicht ausgeschaltet")
         ]
 }
 end
