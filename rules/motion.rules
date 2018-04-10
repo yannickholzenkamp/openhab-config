@@ -1,10 +1,14 @@
-rule "MS_FLUR"
+var Timer delay= null
+rule "Motion_Sensor"
     when
-    	Item MS_FLUR changed
+    	Item Motion_Sensor changed
     then
-      logError("motion.rules", "Motion sensor triggered")
-      logError("motion.rules", MS_FLUR.state)
-      if(MS_FLUR.state == ON){
-        CL_SETTINGS_WOHNZIMMER.sendCommand(new HSBType(new DecimalType(0), new PercentType(100), new PercentType(100)))
-      }
+      if(Motion_Sensor.state == ON){
+        CL_HUE_WZ.sendCommand(100)
+        
+         //Turn off the light after 60 seconds
+         delay = createTimer(now.plusSeconds(60)) [|
+		CL_HUE_WZ.sendCommand(0)	
+	]
+}
 end
