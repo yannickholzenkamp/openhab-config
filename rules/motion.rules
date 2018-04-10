@@ -2,6 +2,8 @@ rule "MS_FLUR"
     when
     	Item MS_FLUR changed
     then
+      logError("motion.rules", "Motion sensor triggered")
+      logError("motion.rules", MS_FLUR.state)
       if(MS_FLUR.state == ON){
         CL_SETTINGS_WOHNZIMMER.sendCommand(new HSBType(new DecimalType(0), new PercentType(100), new PercentType(100)))
       }
