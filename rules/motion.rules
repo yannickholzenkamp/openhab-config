@@ -1,4 +1,4 @@
-rule "HUE_MOTION_FLUR"
+rule "Hue_Motion_WZ"
     when
     	Item Hue_Motion_WZ changed
     then
