@@ -2,23 +2,27 @@ rule "Hue_Motion_WZ"
     when
     	Item Hue_Motion_WZ changed
     then
-      logInfo("motion.rules", "WZ Bewegungsmelder aktiviert")
-      logInfo("motion.rules", "State: " + Hue_Motion_WZ.state)
-      if((Hue_Motion_WZ.state == ON) && (SW_SETTINGS_FERNSEHEN.state == OFF)){
-          SW_SETTINGS_FERNSEHEN.sendCommand("ON")
-          /*
-        DM_HUE_FL.sendCommand(100)
-        logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 100%")
-        
-        createTimer(now.plusSeconds(30)) [|
-            DM_HUE_FL.sendCommand(50)
-            logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 50%")
-        ]
+        logInfo("motion.rules", "Wohnzimmer Bewegungsmelder Änderung")
+        logInfo("motion.rules", "Motion Sensor State: " + Hue_Motion_WZ.state)
+        logInfo("motion.rules", "Fernsehen State: " + SW_SETTINGS_FERNSEHEN.state)
+        if((Hue_Motion_WZ.state == ON) && (SW_SETTINGS_FERNSEHEN.state == OFF)){
+            logInfo("motion.rules", "Starte Fernsehen...")
+            SW_SETTINGS_FERNSEHEN.sendCommand("ON")
+            /*
+            DM_HUE_FL.sendCommand(100)
+            logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 100%")
+            
+            createTimer(now.plusSeconds(30)) [|
+                DM_HUE_FL.sendCommand(50)
+                logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 50%")
+            ]
 
-        createTimer(now.plusSeconds(60)) [|
-            DM_HUE_FL.sendCommand(0)
-            logInfo("motion.rules", "Flurlicht ausgeschaltet")
-        ]
-        */
-}
+            createTimer(now.plusSeconds(60)) [|
+                DM_HUE_FL.sendCommand(0)
+                logInfo("motion.rules", "Flurlicht ausgeschaltet")
+            ]
+            */
+        } else {
+            logInfo("motion.rules", "Starte Fernsehen nicht")
+        }
 end
