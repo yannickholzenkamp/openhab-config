@@ -1,5 +1,7 @@
 sitemap home label="Zuhause" {
 
+    Text 	item=HUE_Temp
+
     Frame label="Szenen" {
 
         Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
