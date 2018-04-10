@@ -4,6 +4,6 @@ String HARMONY_APLTV    "HMY ATV"       (gMain)         {channel="harmonyhub:dev
 String HARMONY_HKAVR    "HMY AVR"       (gMain)         {channel="harmonyhub:device:HarmonyHub:46066704:buttonPress"}
 
 // Items to control media devices
-Switch SWITCH_LGTV          "TV"        [Switchable]    {channel=">[ON] >[OFF]"}
-Switch SWITCH_APLTV         "Apple TV"  [Switchable]    {channel=">[ON] >[OFF]"}
-Switch SWITCH_HKAVR         "Receiver"  [Switchable]    {channel=">[ON] >[OFF]"}
+Switch SWITCH_LGTV      "TV"            [Switchable]    {channel=">[ON] >[OFF]"}
+Switch SWITCH_APLTV     "Apple TV"      [Switchable]    {channel=">[ON] >[OFF]"}
+Switch SWITCH_HKAVR     "Receiver"      [Switchable]    {channel=">[ON] >[OFF]"}

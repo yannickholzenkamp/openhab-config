@@ -1,21 +1,11 @@
-// ------------------------------
-// Items to control lighting
-// ------------------------------
+// Items controlled via Philips Hue
+Color  CL_HUE_LS        "Lightstrip"            (HUE_LS)    [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
+Color  CL_HUE_SZ        "Schlafzimmer Decke"    (HUE_DL)    [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
+Color  CL_HUE_WZ        "Wohnzimmerlampe"       (HUE_ST)    [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
+Color  CL_HUE_SF        "Sofalampe"             (HUE_KS)    [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Dimmer DM_HUE_FL        "Flurlicht"                         [Lighting] {channel = "hue:0220:00178840e9b7:7:brightness"}
 
-Color  CL_HUE_ALL "Alle Lampen" [Lighting]
-
-// Schlafzimmer
-Color  CL_SETTINGS_SCHLAFZIMMER "Schlafzimmerlicht" [Lighting]
-Color  CL_HUE_LS "Lightstrip" (HUE_LS) [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
-Color  CL_HUE_SZ "Schlafzimmer Deckenlampe" (HUE_DL) [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
-
-// Wohnzimmer
-Color  CL_SETTINGS_WOHNZIMMER "Wohnzimmerlicht" [Lighting]
-Color  CL_HUE_WZ "Wohnzimmerlampe" (HUE_ST) [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
-Color  CL_HUE_SF "Sofalampe" (HUE_KS) [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
-
-// Flur
-Dimmer DM_HUE_FL "Flurlicht" [Lighting] {channel = "hue:0220:00178840e9b7:7:brightness"}
-
-// Küche
-Switch  SW_OSRAM_KU "Küchenlicht" [Switchable] {channel = "hue:0010:00178840e9b7:6:switch"}
+// Items to control lights
+Color  CL_HUE_ALL       "Alle Lampen"                       [Lighting]
+Color  CL_SCHLAFZIMMER  "Schlafzimmerlicht"                 [Lighting]
+Color  CL_WOHNZIMMER    "Wohnzimmerlicht"                   [Lighting]

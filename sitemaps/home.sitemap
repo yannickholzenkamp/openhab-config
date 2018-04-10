@@ -21,9 +21,9 @@ sitemap home label="Zuhause" {
 
     Frame label="Schlafzimmer" {
 
-        Switch item=CL_SETTINGS_SCHLAFZIMMER label="Licht" icon="lightbulb"
-        Slider item=CL_SETTINGS_SCHLAFZIMMER label="Dimmer" icon="lightbulb"
-        Colorpicker item=CL_SETTINGS_SCHLAFZIMMER label="Lichtfarbe" icon="lightbulb"
+        Switch item=CL_SCHLAFZIMMER label="Licht" icon="lightbulb"
+        Slider item=CL_SCHLAFZIMMER label="Dimmer" icon="lightbulb"
+        Colorpicker item=CL_SCHLAFZIMMER label="Lichtfarbe" icon="lightbulb"
 
     }
 
