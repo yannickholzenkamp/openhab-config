@@ -10,14 +10,5 @@ rule "HUE_MOTION_FLUR"
             CL_HUE_WZ.sendCommand(100)	
             OSRAM_KUECHE_STRIP.sendCommand("ON")
         ]
-
-        createTimer(now.plusSeconds(30)) [|
-            CL_HUE_WZ.sendCommand(0)	
-            OSRAM_KUECHE_STRIP.sendCommand("OFF")
-        ]
-
-        createTimer(now.plusSeconds(60)) [|
-            CL_HUE_WZ.sendCommand(100)	
-        ]
 }
 end
