@@ -5,7 +5,7 @@ rule "Hue_Motion_WZ"
         logInfo("motion.rules", "Wohnzimmer Bewegungsmelder Änderung")
         logInfo("motion.rules", "Motion Sensor State: " + Hue_Motion_WZ.state)
         logInfo("motion.rules", "Fernsehen State: " + SW_SETTINGS_FERNSEHEN.state)
-        if((Hue_Motion_WZ.state == ON) && (SW_SETTINGS_FERNSEHEN.state == OFF)){
+        if((Hue_Motion_WZ.state == ON) && (SW_SETTINGS_FERNSEHEN.state != ON)){
             logInfo("motion.rules", "Starte Fernsehen...")
             SW_SETTINGS_FERNSEHEN.sendCommand("ON")
             /*
