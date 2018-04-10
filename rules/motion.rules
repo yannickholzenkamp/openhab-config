@@ -1,14 +1,17 @@
 rule "HUE_MOTION_FLUR"
     when
-    	Item HUE_MOTION_FLUR changed
+    	Item Hue_Motion_Flur changed
     then
-      logInfo("motion.rules", "Motion sensor presence detected")
-      if(HUE_MOTION_FLUR.state == ON){
-        CL_HUE_WZ.sendCommand(0)
+      logInfo("motion.rules", "Flur Motion sensor presence detected")
+      if(Hue_Motion_Flur.state == ON){
+        DM_HUE_FL.sendCommand(100)
         
-        createTimer(now.plusSeconds(10)) [|
-            CL_HUE_WZ.sendCommand(100)	
-            OSRAM_KUECHE_STRIP.sendCommand("ON")
+        createTimer(now.plusSeconds(30)) [|
+            DM_HUE_FL.sendCommand(50)
+        ]
+
+        createTimer(now.plusSeconds(60)) [|
+            DM_HUE_FL.sendCommand(0)
         ]
 }
 end

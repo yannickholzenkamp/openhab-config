@@ -1,6 +1,6 @@
 sitemap home label="Zuhause" {
 
-    Text item=HUE_TEMP
+    Text item=Hue_Temp
 
     Frame label="Szenen" {
 
