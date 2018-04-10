@@ -1,0 +1,1 @@
+Switch MS_FLUR "Motion sensor Flur" <present> (gSkur) { http="<[192.168.2.106/HUE_BRIDGE_API_KEY/sensors/7:1000:JS(getHueMotionEvent.js)]" }

@@ -1,0 +1,8 @@
+rule "MS_FLUR"
+    when
+    	Item MS_FLUR changed
+    then
+      if(MS_FLUR.state == ON){
+        CL_HUE_SZ.sendCommand(new HSBType(new DecimalType(0), new PercentType(100), new PercentType(100)))
+      }
+end
