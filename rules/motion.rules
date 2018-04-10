@@ -5,6 +5,8 @@ rule "HUE_MOTION_FLUR"
       logInfo("motion.rules", "Flur Bewegungsmelder aktiviert")
       logInfo("motion.rules", "State: " + Hue_Motion_Flur.state)
       if(Hue_Motion_Flur.state == ON){
+          SW_SETTINGS_FERNSEHEN.sendCommand("ON")
+          /*
         DM_HUE_FL.sendCommand(100)
         logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 100%")
         
@@ -17,5 +19,6 @@ rule "HUE_MOTION_FLUR"
             DM_HUE_FL.sendCommand(0)
             logInfo("motion.rules", "Flurlicht ausgeschaltet")
         ]
+        */
 }
 end
