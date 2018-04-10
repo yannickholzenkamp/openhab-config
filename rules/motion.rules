@@ -4,7 +4,7 @@ rule "HUE_MOTION_FLUR"
     then
       logInfo("motion.rules", "Flur Bewegungsmelder aktiviert")
       logInfo("motion.rules", "State: " + Hue_Motion_Flur.state)
-      if(Hue_Motion_Flur.state == ON){
+      if((Hue_Motion_Flur.state == ON) && (SW_SETTINGS_FERNSEHEN.state == OFF)){
           SW_SETTINGS_FERNSEHEN.sendCommand("ON")
           /*
         DM_HUE_FL.sendCommand(100)
