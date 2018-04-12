@@ -1,4 +1,4 @@
-rule "Hue_Motion_WZ"
+/*rule "Hue_Motion_WZ"
     when
     	Item Hue_Motion_WZ changed
     then
@@ -8,7 +8,7 @@ rule "Hue_Motion_WZ"
         if((Hue_Motion_WZ.state == ON) && (SW_SETTINGS_FERNSEHEN.state != ON)){
             logInfo("motion.rules", "Starte Fernsehen...")
             SW_SETTINGS_FERNSEHEN.sendCommand("ON")
-            /*
+            
             DM_HUE_FL.sendCommand(100)
             logInfo("motion.rules", "Flurlicht für 30 Sekunden auf 100%")
             
@@ -21,8 +21,8 @@ rule "Hue_Motion_WZ"
                 DM_HUE_FL.sendCommand(0)
                 logInfo("motion.rules", "Flurlicht ausgeschaltet")
             ]
-            */
         } else {
             logInfo("motion.rules", "Starte Fernsehen nicht")
         }
 end
+*/
