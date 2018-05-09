@@ -27,5 +27,5 @@ rule "Wohnzimmerlicht an/aus"
     Item CL_WOHNZIMMER received command
   then
     CL_HUE_WZ.sendCommand(receivedCommand)
-    CL_HUE_SF.sendCommand(receivedCommand)
+    //CL_HUE_SF.sendCommand(receivedCommand)
   end
