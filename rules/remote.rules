@@ -10,9 +10,12 @@ then
     switch Hue_Remote_Flur.state.toString {
 			//case "2002":
 			//case "3002": 
-			//case "1002": {
-			//	CL_HUE_ALL.sendCommand("ON")  
-        	//}
+			case "1002": {
+                CL_WOHNZIMMER.sendCommand(20)
+                HARMONY_APLTV.sendCommand("Home")
+                HARMONY_HKAVR.sendCommand("PowerOn")
+                HARMONY_LGTV.sendCommand("PowerOn")
+        	}
 			case "4002": { 
 				CL_HUE_ALL.sendCommand("OFF")
                 HARMONY_APLTV.sendCommand("Home")
