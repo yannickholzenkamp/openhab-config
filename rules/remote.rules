@@ -17,7 +17,9 @@ then
         	}
 			case "4002": { 
 				CL_HUE_ALL.sendCommand("OFF")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
+                HARMONY_APLTV.sendCommand("Home")
+                HARMONY_HKAVR.sendCommand("PowerOff")
+                HARMONY_LGTV.sendCommand("PowerOff")
         	}
         }
       remoteLastUpdate = Hue_Remote_Flur_UPDATE.state.toString
