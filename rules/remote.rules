@@ -13,11 +13,11 @@ then
 			//case "3002": 
 				// do nothing
 			case "1002": {
-				CL_HUE_ALL.sendCommand(ON)  
+				CL_HUE_ALL.sendCommand("ON")  
         	}
 			case "4002": { 
-				CL_HUE_ALL.sendCommand(OFF)
-                SW_SETTINGS_FERNSEHEN.sendCommand(OFF)
+				CL_HUE_ALL.sendCommand("OFF")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
         	}
         }
       remoteLastUpdate = Hue_Remote_Flur_UPDATE.state.toString
