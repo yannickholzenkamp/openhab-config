@@ -16,7 +16,10 @@ then
 				CL_HUE_ALL.sendCommand("ON")  
         	}
 			case "4002": { 
-				CL_HUE_ALL.sendCommand("OFF")
+				CL_HUE_LS.sendCommand("OFF")
+                CL_HUE_SZ.sendCommand("OFF")
+                CL_HUE_WZ.sendCommand("OFF")
+                CL_HUE_SF.sendCommand("OFF")
                 HARMONY_APLTV.sendCommand("Home")
                 HARMONY_HKAVR.sendCommand("PowerOff")
                 HARMONY_LGTV.sendCommand("PowerOff")
