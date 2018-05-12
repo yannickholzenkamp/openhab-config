@@ -1,0 +1,2 @@
+String Hue_Remote_Flur "Remote [%s]" {http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/22:500:JSONPATH($.state.buttonevent)]"}
+String Hue_Remote_Flur_UPDATE "Remote Update [%s]" {http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/22:500:JSONPATH($.state.lastupdated)]"

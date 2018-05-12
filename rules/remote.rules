@@ -1,0 +1,24 @@
+import java.lang.String
+var String remoteLastUpdate
+
+rule "Hue Remote"
+when
+    Item Hue_Remote_Flur_UPDATE changed 
+then
+
+    if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
+    switch Hue_Remote_Flur.state.toString {
+			case "2002":
+				// do nothing
+			case "3002": 
+				// do nothing
+			case "1002": {
+				CL_HUE_ALL.sendCommand(ON)  
+        	}
+			case "4002": { 
+				CL_HUE_ALL.sendCommand(OFF)
+                SW_SETTINGS_FERNSEHEN.sendCommand(OFF)
+        	}
+        }
+      remoteLastUpdate = Hue_Remote_Flur_UPDATE.state.toString
+end
