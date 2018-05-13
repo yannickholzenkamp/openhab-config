@@ -8,14 +8,10 @@ rule "Fernsehen an, Lichter dimmen 1"
       HARMONY_HKAVR.sendCommand("PowerOn")
       HARMONY_LGTV.sendCommand("PowerOn")
       CL_WOHNZIMMER.sendCommand(20)
-    } else if (receivedCommand == "OFF_NOLIGHT") {
-      HARMONY_APLTV.sendCommand("Home")
-      HARMONY_LGTV.sendCommand("PowerOff")
-      HARMONY_HKAVR.sendCommand("PowerOff")
-      HARMONY_HKAVR.sendCommand("PowerOff")
     } else {
         HARMONY_APLTV.sendCommand("Home")
         HARMONY_LGTV.sendCommand("PowerOff")
+        Thread::sleep(1000)
         HARMONY_HKAVR.sendCommand("PowerOff")
         HARMONY_HKAVR.sendCommand("PowerOff")
         if (SW_SETTINGS_FERNSEHEN_LIGHTS.state == "") {
