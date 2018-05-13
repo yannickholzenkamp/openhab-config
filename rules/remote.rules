@@ -29,8 +29,10 @@ then
                 CL_WOHNZIMMER.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
                 HARMONY_APLTV.sendCommand("Pause")
+                Thread::sleep(500)
 				HARMONY_APLTV.sendCommand("Home")
                 HARMONY_APLTV.sendCommand("Pause")
+                Thread::sleep(500)
                 HARMONY_APLTV.sendCommand("Home")
                 Thread::sleep(2500)
                 HARMONY_APLTV.sendCommand("DirectionDown")
@@ -41,7 +43,7 @@ then
             }
             case "2003": {
                 logInfo("remote.rules", "Remote: Dim up / Long")
-                
+                SWITCH_ALARM_SYSTEM.sendCommand("OFF")
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")

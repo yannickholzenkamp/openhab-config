@@ -5,8 +5,9 @@ rule "Fernsehen an, Lichter dimmen 1"
     if (receivedCommand == ON) {
       // Turn TV, AVR & Apple TV on
       HARMONY_APLTV.sendCommand("Home")
-      HARMONY_HKAVR.sendCommand("PowerOn")
       HARMONY_LGTV.sendCommand("PowerOn")
+      Thread::sleep(1000)
+      HARMONY_HKAVR.sendCommand("PowerOn")
       CL_WOHNZIMMER.sendCommand(20)
     } else {
         HARMONY_APLTV.sendCommand("Home")
