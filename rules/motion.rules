@@ -5,6 +5,7 @@ rule "Hue_Motion_Flur"
         logInfo("motion.rules", "Motion detected: Flur")
         if((Hue_Motion_Flur.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
             logInfo("motion.rules", "Alarm triggered")
+            sendBroadcastNotification("Alarm triggered! - Flur")
         } else {
             logInfo("motion.rules", "Alarm not triggered")
         }
@@ -17,6 +18,7 @@ rule "Hue_Temp_Kueche"
         logInfo("motion.rules", "Motion detected: Kueche")
         if((Hue_Temp_Kueche.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
             logInfo("motion.rules", "Alarm triggered")
+            sendBroadcastNotification("Alarm triggered! - Küche")
         } else {
             logInfo("motion.rules", "Alarm not triggered")
         }
