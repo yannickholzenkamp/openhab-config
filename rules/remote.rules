@@ -7,9 +7,14 @@ when
 then
 
     if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
+    logInfo("remote.rules","Update Time" + Hue_Remote_Flur_UPDATE.state.toString)
     switch Hue_Remote_Flur.state.toString {
-			//case "2002":
-			//case "3002": 
+			case "2002": {
+
+            }
+			case "3002": {
+
+            }
 			case "1002": {
                 CL_WOHNZIMMER.sendCommand(20)
                 HARMONY_APLTV.sendCommand("Home")
