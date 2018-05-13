@@ -54,6 +54,11 @@ then
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
                 CL_SCHLAFZIMMER.sendCommand(command)
             }
+            case "4000": {
+                logInfo("remote.rules", "Remote: Off / Short - Case 4000")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
+				CL_HUE_ALL.sendCommand("OFF")
+        	}
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
                 SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
