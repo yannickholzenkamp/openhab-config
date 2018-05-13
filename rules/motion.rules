@@ -13,10 +13,10 @@ end
 
 rule "Hue_Temp_Kueche"
     when
-    	Item Hue_Temp_Kueche changed
+    	Item Hue_Motion_Kueche changed
     then
         logInfo("motion.rules", "Motion detected: Kueche")
-        if((Hue_Temp_Kueche.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
+        if((Hue_Motion_Kueche.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
             logInfo("motion.rules", "Alarm triggered")
             sendBroadcastNotification("Bewegung erkannt! - Küche")
         } else {
