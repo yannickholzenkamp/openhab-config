@@ -7,6 +7,7 @@ when
 then
     logInfo("remote.rules", "Remote UPD: " + Hue_Remote_Flur_UPDATE.state.toString)
     logInfo("remote.rules", "Remote: " + Hue_Remote_Flur.state.toString)
+    logInfo("remote.rules", "Test: " + Hue_Remote_Flur_UPDATE.state.toString.split("T")[0])
     if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
     switch Hue_Remote_Flur.state.toString {
             case "1002": {
