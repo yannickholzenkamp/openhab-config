@@ -8,10 +8,10 @@ rule "All lights"
   then
     CL_HUE_LS.sendCommand(receivedCommand)
     CL_HUE_SZ.sendCommand(receivedCommand)
-    CL_HUE_WZ.sendCommand(receivedCommand)
+    DM_HUE_WZ.sendCommand(receivedCommand)
     CL_HUE_SF.sendCommand(receivedCommand)
     OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
-    DM_HUE_FL.sendCommand(receivedCommand)
+    CL_HUE_FL.sendCommand(receivedCommand)
   end
 
 rule "Schlafzimmerlicht an/aus"
@@ -26,6 +26,6 @@ rule "Wohnzimmerlicht an/aus"
   when 
     Item CL_WOHNZIMMER received command
   then
-    CL_HUE_WZ.sendCommand(receivedCommand)
+    DM_HUE_WZ.sendCommand(receivedCommand)
     CL_HUE_SF.sendCommand(receivedCommand)
   end

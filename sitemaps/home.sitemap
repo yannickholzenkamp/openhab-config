@@ -14,9 +14,8 @@ sitemap home label="Zuhause" {
 
         Switch item=SWITCH_LGTV label="Fernseher" icon="screen"
         Switch item=SWITCH_HKAVR label="AV Receiver" icon="receiver"
-        Switch item=CL_HUE_WZ label="Licht" icon="lightbulb"
-        Slider item=CL_HUE_WZ label="Dimmer" icon="lightbulb"
-        Colorpicker item=CL_HUE_WZ label="Lichtfarbe" icon="lightbulb"
+        Switch item=DM_HUE_WZ label="Licht" icon="lightbulb"
+        Slider item=DM_HUE_WZ label="Dimmer" icon="lightbulb"
 
     }
 
@@ -30,8 +29,8 @@ sitemap home label="Zuhause" {
 
     Frame label="Flur" {
 
-        Switch item=DM_HUE_FL label="Licht" icon="lightbulb"
-        Slider item=DM_HUE_FL label="Dimmer" icon="lightbulb"
+        Switch item=CL_HUE_FL label="Licht" icon="lightbulb"
+        Slider item=CL_HUE_FL label="Dimmer" icon="lightbulb"
 
     }
 
