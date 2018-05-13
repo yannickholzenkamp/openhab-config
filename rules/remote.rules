@@ -5,14 +5,11 @@ rule "Hue Remote"
 when
     Item Hue_Remote_Flur changed 
 then
-    logInfo("remote.rules", "Remote Test: " + Hue_Remote_Flur.state.toString)
+    logInfo("remote.rules", "Remote Input: " + Hue_Remote_Flur.state.toString)
     var String state = Hue_Remote_Flur.state.toString.split("-RMT-").get(0) 
-    logInfo("remote.rules", "Remote Test: " + state)
-    var String timestamp = "123"
-    //timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(0) as String
-    logInfo("remote.rules", "Remote UPD: " + timestamp)
-    logInfo("remote.rules", "Remote: " + state)
+    var String timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(1)
     if ( timestamp != remoteLastUpdate ) {
+        logInfo("remote.rules", "Remote: New Command " + state)
         switch state {
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
