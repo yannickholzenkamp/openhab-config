@@ -9,3 +9,15 @@ rule "Hue_Motion_Flur"
             logInfo("motion.rules", "Alarm not triggered")
         }
 end
+
+rule "Hue_Temp_Kueche"
+    when
+    	Item Hue_Temp_Kueche changed
+    then
+        logInfo("motion.rules", "Motion detected: Kueche")
+        if((Hue_Temp_Kueche.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
+            logInfo("motion.rules", "Alarm triggered")
+        } else {
+            logInfo("motion.rules", "Alarm not triggered")
+        }
+end

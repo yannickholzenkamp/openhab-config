@@ -1,9 +1,66 @@
 import java.lang.String
 var String remoteLastUpdate
 
-rule "Hue Remote"
+rule "Hue_Remote_Flur_UPDATE"
 when
     Item Hue_Remote_Flur_UPDATE changed 
+then
+
+    if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
+    switch Hue_Remote_Flur.state.toString {
+            case "1002": {
+                logInfo("remote.rules", "Remote: On / Short")
+                CL_WOHNZIMMER.sendCommand(100)
+                OSRAM_KUECHE_STRIP.sendCommand("ON")
+        	}
+            case "1003": {
+                logInfo("remote.rules", "Remote: On / Long")
+                CL_WOHNZIMMER.sendCommand(20)
+                HARMONY_APLTV.sendCommand("Home")
+                HARMONY_HKAVR.sendCommand("PowerOn")
+                HARMONY_LGTV.sendCommand("PowerOn")
+        	}
+			case "2002": {
+                logInfo("remote.rules", "Remote: Dim up / Short")
+            }
+            case "2003": {
+                logInfo("remote.rules", "Remote: Dim up / Long")
+
+            }
+			case "3002": {
+                logInfo("remote.rules", "Remote: Dim down / Short")
+
+            }
+            case "3003": {
+                logInfo("remote.rules", "Remote: Dim down / Long")
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
+                CL_HUE_LS.sendCommand(command)
+                CL_HUE_SZ.sendCommand(command)
+            }
+			case "4002": {
+                logInfo("remote.rules", "Remote: Off / Short")
+				CL_HUE_ALL.sendCommand("OFF")
+                HARMONY_APLTV.sendCommand("Home")
+                HARMONY_LGTV.sendCommand("PowerOff")
+                HARMONY_HKAVR.sendCommand("PowerOff")
+                HARMONY_HKAVR.sendCommand("PowerOff")
+        	}
+            case "4003": {
+                logInfo("remote.rules", "Remote: Off / Long")
+				CL_HUE_ALL.sendCommand("OFF")
+                HARMONY_APLTV.sendCommand("Home")
+                HARMONY_LGTV.sendCommand("PowerOff")
+                HARMONY_HKAVR.sendCommand("PowerOff")
+                HARMONY_HKAVR.sendCommand("PowerOff")
+                SWITCH_ALARM_SYSTEM.sendCommand("ON")
+        	}
+        }
+      remoteLastUpdate = Hue_Remote_Flur_UPDATE.state.toString
+end
+
+rule "Hue_Remote_Flur"
+when
+    Item Hue_Remote_Flur changed 
 then
 
     if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
