@@ -40,7 +40,6 @@ then
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
 				CL_HUE_ALL.sendCommand("OFF")
-                HARMONY_HKAVR.sendCommand("PowerOn")
                 HARMONY_APLTV.sendCommand("Home")
                 HARMONY_LGTV.sendCommand("PowerOff")
                 HARMONY_HKAVR.sendCommand("PowerOff")
@@ -49,7 +48,6 @@ then
             case "4003": {
                 logInfo("remote.rules", "Remote: Off / Long")
 				CL_HUE_ALL.sendCommand("OFF")
-                HARMONY_HKAVR.sendCommand("PowerOn")
                 HARMONY_APLTV.sendCommand("Home")
                 HARMONY_LGTV.sendCommand("PowerOff")
                 HARMONY_HKAVR.sendCommand("PowerOff")
