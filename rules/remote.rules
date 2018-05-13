@@ -28,6 +28,8 @@ then
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
                 CL_WOHNZIMMER.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
+                HARMONY_APLTV.sendCommand("Menu")
+                HARMONY_APLTV.sendCommand("Home")
                 HARMONY_APLTV.sendCommand("DirectionDown")
                 HARMONY_APLTV.sendCommand("Select")
         	}
