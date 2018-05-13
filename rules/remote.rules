@@ -28,11 +28,9 @@ then
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
                 CL_WOHNZIMMER.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
-                Thread::sleep(2000)
 				HARMONY_APLTV.sendCommand("Home")
-                Thread::sleep(1000)
+                Thread::sleep(2500)
                 HARMONY_APLTV.sendCommand("DirectionDown")
-                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("Select")
         	}
 			case "2002": {
