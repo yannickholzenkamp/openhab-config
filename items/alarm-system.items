@@ -1,0 +1,1 @@
+Switch  SWITCH_ALARM_SYSTEM    "Alarmanlage"    [Switchable]    {channel=">[ON] >[OFF]"}

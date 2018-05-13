@@ -1,12 +1,12 @@
 sitemap home label="Zuhause" {
 
-    Text item=Hue_Temp_Kueche
-    Text item=Hue_Temp_Flur
+    Frame label="Wohnung" {
 
-    Frame label="Szenen" {
-
+        Text item=Hue_Temp_Kueche
+        Text item=Hue_Temp_Flur
         Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
         Switch item=CL_HUE_ALL label="Alle Lampen" icon="lightbulb"
+        Switch item=SWITCH_ALARM_SYSTEM label="Alarmanlage" icon="siren"
 
     }
 

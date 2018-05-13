@@ -1,2 +1,1 @@
-// Items für Alexa
 Switch  SW_SETTINGS_FERNSEHEN    "Fernseher"    [Switchable]    {channel=">[ON] >[OFF]"}
