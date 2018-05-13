@@ -10,7 +10,7 @@ then
     logInfo("remote.rules", "Remote Test: " + state)
     var String timestamp = "123"
     //timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(0) as String
-    logInfo("remote.rules", "Remote UPD: " + lastUpdate)
+    logInfo("remote.rules", "Remote UPD: " + timestamp)
     logInfo("remote.rules", "Remote: " + state)
     if ( timestamp != remoteLastUpdate ) {
         switch state {
