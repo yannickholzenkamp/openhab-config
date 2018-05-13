@@ -3,13 +3,14 @@ var String remoteLastUpdate
 
 rule "Hue Remote"
 when
-    Item Hue_Remote_Flur_UPDATE changed 
+    Item Hue_Remote_Flur changed 
 then
-    logInfo("remote.rules", "Remote UPD: " + Hue_Remote_Flur_UPDATE.state.toString)
-    logInfo("remote.rules", "Remote: " + Hue_Remote_Flur.state.toString)
-    logInfo("remote.rules", "Test: " + Hue_Remote_Flur_UPDATE.state.toString.split("T").get(0))
-    if ( Hue_Remote_Flur_UPDATE.state.toString != remoteLastUpdate )
-    switch Hue_Remote_Flur.state.toString {
+    var String state = Hue_Remote_Flur.state.toString.split("-RMT-").get(0)
+    var String timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(0)
+    logInfo("remote.rules", "Remote UPD: " + lastUpdate)
+    logInfo("remote.rules", "Remote: " + state)
+    if ( timestamp != remoteLastUpdate ) {
+        switch state {
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
                 CL_WOHNZIMMER.sendCommand(100)
@@ -57,5 +58,6 @@ then
                 SWITCH_ALARM_SYSTEM.sendCommand("ON")
         	}
         }
-      remoteLastUpdate = Hue_Remote_Flur_UPDATE.state.toString
+        remoteLastUpdate = timestamp
+    }
 end
