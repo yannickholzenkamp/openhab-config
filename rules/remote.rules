@@ -29,13 +29,15 @@ then
                 CL_WOHNZIMMER.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
                 HARMONY_APLTV.sendCommand("Pause")
-                Thread::sleep(500)
+                Thread::sleep(1000)
 				HARMONY_APLTV.sendCommand("Home")
+                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("Pause")
-                Thread::sleep(500)
+                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("Home")
-                Thread::sleep(2500)
+                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("DirectionDown")
+                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("Select")
         	}
 			case "2002": {
