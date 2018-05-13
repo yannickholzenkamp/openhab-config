@@ -1,6 +1,6 @@
 rule "SWITCH_ALARM_SYSTEM"
     when
-    	Item SWITCH_ALARM_SYSTEM changed
+    	Item SWITCH_ALARM_SYSTEM received command
     then
         if (receivedCommand == ON) {
             logInfo("alarm-system.rules", "Alarm armed")
