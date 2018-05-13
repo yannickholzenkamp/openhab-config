@@ -1,7 +1,7 @@
 // Motion Sensor 	
-Switch  Hue_Motion_Flur   { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/10:200:JS(getHueMotionEvent.js)]" }
+Switch  Hue_Motion_Flur   { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/11:200:JS(getHueMotionEvent.js)]" }
 Switch  Hue_Motion_Kueche { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/19:200:JS(getHueMotionEvent.js)]" }
 
 // Temperature
-Number	Hue_Temp_Kueche "Temperatur Küche [%.2f °C]" ["CurrentTemperature"]	 { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/19:10000:JS(getHueTemperature.js)]" }
+Number	Hue_Temp_Kueche "Temperatur Küche [%.2f °C]" ["CurrentTemperature"]	 { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/18:10000:JS(getHueTemperature.js)]" }
 Number	Hue_Temp_Flur 	"Temperatur Flur [%.2f °C]"  ["CurrentTemperature"]  { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/10:10000:JS(getHueTemperature.js)]" }
