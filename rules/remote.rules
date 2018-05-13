@@ -56,12 +56,12 @@ then
             }
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
 				CL_HUE_ALL.sendCommand("OFF")
         	}
             case "4003": {
                 logInfo("remote.rules", "Remote: Off / Long")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
 				CL_HUE_ALL.sendCommand("OFF")
                 SWITCH_ALARM_SYSTEM.sendCommand("ON")
         	}
