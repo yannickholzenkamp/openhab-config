@@ -10,8 +10,9 @@ rule "Fernsehen an, Lichter dimmen 1"
       CL_WOHNZIMMER.sendCommand(20)
     } else {
       HARMONY_APLTV.sendCommand("Home")
-      HARMONY_HKAVR.sendCommand("PowerOff")
       HARMONY_LGTV.sendCommand("PowerOff")
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      HARMONY_HKAVR.sendCommand("PowerOff")
       CL_WOHNZIMMER.sendCommand(100)
     }
   end

@@ -11,7 +11,7 @@ rule "Hue_Motion_Flur"
         }
 end
 
-rule "Hue_Temp_Kueche"
+rule "Hue_Motion_Kueche"
     when
     	Item Hue_Motion_Kueche changed
     then

@@ -13,53 +13,56 @@ then
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                CL_WOHNZIMMER.sendCommand(100)
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                CL_WOHNZIMMER.sendCommand(command)
                 OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                CL_WOHNZIMMER.sendCommand(100)
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                CL_WOHNZIMMER.sendCommand(command)
                 OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
-                CL_WOHNZIMMER.sendCommand(20)
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
+                CL_WOHNZIMMER.sendCommand(command)
+                SW_SETTINGS_FERNSEHEN.sendCommand("ON")
+				HARMONY_APLTV.sendCommand("Home")
                 HARMONY_APLTV.sendCommand("Home")
-                HARMONY_HKAVR.sendCommand("PowerOn")
-                HARMONY_LGTV.sendCommand("PowerOn")
+                HARMONY_APLTV.sendCommand("DirectionDown")
+                HARMONY_APLTV.sendCommand("Select")
         	}
 			case "2002": {
                 logInfo("remote.rules", "Remote: Dim up / Short")
             }
             case "2003": {
                 logInfo("remote.rules", "Remote: Dim up / Long")
-
+                
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
-
+                if (CL_SCHLAFZIMMER.state == ON) {
+                    CL_SCHLAFZIMMER.sendCommand("OFF")
+                } else {
+                    var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                    CL_SCHLAFZIMMER.sendCommand(command)
+                }
             }
             case "3003": {
                 logInfo("remote.rules", "Remote: Dim down / Long")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
-                CL_HUE_LS.sendCommand(command)
-                CL_HUE_SZ.sendCommand(command)
+                CL_SCHLAFZIMMER.sendCommand(command)
             }
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
 				CL_HUE_ALL.sendCommand("OFF")
-                HARMONY_APLTV.sendCommand("Home")
-                HARMONY_LGTV.sendCommand("PowerOff")
-                HARMONY_HKAVR.sendCommand("PowerOff")
-                HARMONY_HKAVR.sendCommand("PowerOff")
         	}
             case "4003": {
                 logInfo("remote.rules", "Remote: Off / Long")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
 				CL_HUE_ALL.sendCommand("OFF")
-                HARMONY_APLTV.sendCommand("Home")
-                HARMONY_LGTV.sendCommand("PowerOff")
-                HARMONY_HKAVR.sendCommand("PowerOff")
-                HARMONY_HKAVR.sendCommand("PowerOff")
                 SWITCH_ALARM_SYSTEM.sendCommand("ON")
         	}
         }
