@@ -1,0 +1,17 @@
+rule "SWITCH_ALARM_SYSTEM"
+    when
+    	Item SWITCH_ALARM_SYSTEM changed
+    then
+        if (receivedCommand == ON) {
+            logInfo("alarm-system.rules", "Alarm armed")
+            var HSBType currentState = DM_HUE_FL.state
+            var HSBType flash = new HSBType(HSBType::GREEN)
+            DM_HUE_FL.sendCommand(flash)
+            createTimer(now.plusSeconds(2)) [|
+                DM_HUE_FL.sendCommand(currentState)
+            ]
+        } else {
+            logInfo("alarm-system.rules", "Alarm disarmed")
+            
+        }
+end
