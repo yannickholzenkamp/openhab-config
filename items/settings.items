@@ -1,1 +1,2 @@
-Switch  SW_SETTINGS_FERNSEHEN    "Fernseher"    [Switchable]    {channel=">[ON] >[OFF] >[OFF_NOLIGHT]"}
+Switch  SW_SETTINGS_FERNSEHEN    "Fernseher"    [Switchable]    {channel=">[ON] >[OFF]"}
+String  SW_SETTINGS_FERNSEHEN_LIGHTS

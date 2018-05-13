@@ -56,17 +56,20 @@ then
             }
             case "4000": {
                 logInfo("remote.rules", "Remote: Off / Short - Case 4000")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
+                SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
 				CL_HUE_ALL.sendCommand("OFF")
         	}
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
+                SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
 				CL_HUE_ALL.sendCommand("OFF")
         	}
             case "4003": {
                 logInfo("remote.rules", "Remote: Off / Long")
-                SW_SETTINGS_FERNSEHEN.sendCommand("OFF_NOLIGHT")
+                SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
+                SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
 				CL_HUE_ALL.sendCommand("OFF")
                 SWITCH_ALARM_SYSTEM.sendCommand("ON")
         	}
