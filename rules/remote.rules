@@ -5,6 +5,7 @@ rule "Hue Remote"
 when
     Item Hue_Remote_Flur changed 
 then
+    logInfo("remote.rules", "Remote Test: " + Hue_Remote_Flur.state.toString)
     var String state = Hue_Remote_Flur.state.toString.split("-RMT-").get(0) 
     logInfo("remote.rules", "Remote Test: " + state)
     var String timestamp = "123"
