@@ -11,8 +11,14 @@ then
     if ( timestamp != remoteLastUpdate ) {
         logInfo("remote.rules", "Remote: New Command " + state)
         switch state {
+            case "1000": {
+                logInfo("remote.rules", "Remote: On / Short - Case 1000")
+                CL_WOHNZIMMER.sendCommand(100)
+                OSRAM_KUECHE_STRIP.sendCommand("ON")
+        	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
+                logInfo("remote.rules", CL_WOHNZIMMER.state)
                 CL_WOHNZIMMER.sendCommand(100)
                 OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
