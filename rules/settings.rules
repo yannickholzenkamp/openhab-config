@@ -10,14 +10,17 @@ rule "Fernsehen an, Lichter dimmen 1"
       HARMONY_HKAVR.sendCommand("PowerOn")
       CL_WOHNZIMMER.sendCommand(20)
     } else {
-        HARMONY_APLTV.sendCommand("Home")
-        HARMONY_LGTV.sendCommand("PowerOff")
-        Thread::sleep(1000)
-        HARMONY_HKAVR.sendCommand("PowerOff")
-        HARMONY_HKAVR.sendCommand("PowerOff")
-        if (SW_SETTINGS_FERNSEHEN_LIGHTS.state == "") {
-          CL_WOHNZIMMER.sendCommand(100)
-        }
+      HARMONY_APLTV.sendCommand("Home")
+      Thread::sleep(1000)
+      HARMONY_APLTV.sendCommand("Pause")
+      HARMONY_APLTV.sendCommand("Home")
+      HARMONY_LGTV.sendCommand("PowerOff")
+      Thread::sleep(1000)
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      HARMONY_HKAVR.sendCommand("PowerOff")
+      if (SW_SETTINGS_FERNSEHEN_LIGHTS.state == "") {
+        CL_WOHNZIMMER.sendCommand(100)
+      }
     }
     SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("")
   end

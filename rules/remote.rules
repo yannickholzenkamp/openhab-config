@@ -28,6 +28,7 @@ then
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
                 CL_WOHNZIMMER.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
+                Thread::sleep(1000)
                 HARMONY_APLTV.sendCommand("Pause")
                 Thread::sleep(1000)
 				HARMONY_APLTV.sendCommand("Home")
