@@ -10,17 +10,17 @@ then
     var String timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(1)
     if ( timestamp != remoteLastUpdate ) {
         logInfo("remote.rules", "Remote: New Command " + state)
-        sendBroadcastNotification("Remote: New Command " + state)
+        //sendBroadcastNotification("Remote: New Command " + state)
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                var HSBType command = HSBType::fromRGB(255, 255, 255)
+                var HSBType command = new HSBType(new DecimalType(0),new PercentType(100),new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                var HSBType command = HSBType::fromRGB(255, 255, 255)
+                var HSBType command = new HSBType(new DecimalType(0),new PercentType(100),new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
