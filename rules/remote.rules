@@ -14,13 +14,13 @@ then
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                var HSBType command = HSBType::fromRGB(255, 204, 153)
+                var HSBType command = HSBType::fromRGB(255, 255, 255)
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                var HSBType command = HSBType::fromRGB(255, 204, 153)
+                var HSBType command = HSBType::fromRGB(255, 255, 255)
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
