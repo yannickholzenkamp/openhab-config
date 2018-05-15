@@ -8,7 +8,7 @@ rule "Fernsehen an, Lichter dimmen 1"
       HARMONY_LGTV.sendCommand("PowerOn")
       Thread::sleep(1000)
       HARMONY_HKAVR.sendCommand("PowerOn")
-      CL_WOHNZIMMER.sendCommand(20)
+      HUE_MODE_WZ.sendCommand(20)
     } else {
       HARMONY_APLTV.sendCommand("Home")
       Thread::sleep(1000)
