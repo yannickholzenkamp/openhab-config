@@ -26,8 +26,7 @@ rule "Wohnzimmerlicht"
   when 
     Item HUE_MODE_WZ received command
   then
-    var HSBType command = new HSBType(new DecimalType(0), new PercentType(0), new PercentType(receivedCommand))
-    HUE_LAMP_WZD.sendCommand(command)
+    HUE_LAMP_WZD.sendCommand(receivedCommand)
   end
 
 rule "Esszimmerlicht"
