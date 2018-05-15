@@ -17,7 +17,6 @@ rule "Fernsehen an, Lichter dimmen 1"
       Thread::sleep(1000)
       HARMONY_HKAVR.sendCommand("PowerOff")
       HARMONY_HKAVR.sendCommand("PowerOff")
-      logInfo("settings.rules", "SW_SETTINGS_FERNSEHEN_LIGHTS.state " + SW_SETTINGS_FERNSEHEN_LIGHTS.state)
       if (SW_SETTINGS_FERNSEHEN_LIGHTS.state == "") {
         HUE_MODE_WZ.sendCommand(100)
       }

@@ -28,8 +28,7 @@ then
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
-                var HSBType command = new HSBType(new DecimalType(100), new PercentType(50), new PercentType(40))
-                HUE_MODE_WZ.sendCommand(command)
+                HUE_MODE_WZ.sendCommand(20)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
 			case "2002": {
