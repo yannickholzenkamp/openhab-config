@@ -28,6 +28,7 @@ then
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
+                HUE_MODE_EZ.sendCommand(20)
                 HUE_MODE_WZ.sendCommand(20)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
