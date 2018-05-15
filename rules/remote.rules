@@ -17,14 +17,12 @@ then
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
-                OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
-                OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
