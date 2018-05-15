@@ -39,6 +39,7 @@ then
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
+                logInfo("remote.rules", "State SZ: " + HUE_MODE_SZ.state)
                 if (HUE_MODE_SZ.state == ON) {
                     HUE_MODE_SZ.sendCommand("OFF")
                 } else {
