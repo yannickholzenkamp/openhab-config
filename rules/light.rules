@@ -29,9 +29,23 @@ rule "Wohnzimmerlicht"
     HUE_LAMP_WZD.sendCommand(receivedCommand)
   end
 
-rule "Wohnzimmerlicht"
+rule "Esszimmerlicht"
   when 
     Item HUE_MODE_EZ received command
   then
     HUE_LAMP_EZD.sendCommand(receivedCommand)
+  end
+
+rule "Wohnzimmerlicht CT"
+  when 
+    Item HUE_MODE_WZ_CT received command
+  then
+    HUE_LAMP_WZD_CT.sendCommand(receivedCommand)
+  end
+
+rule "Esszimmerlicht CT"
+  when 
+    Item HUE_MODE_EZ_CT received command
+  then
+    HUE_LAMP_EZD_CT.sendCommand(receivedCommand)
   end
