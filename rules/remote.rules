@@ -14,13 +14,13 @@ then
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                HUE_MODE_EZ.sendCommand(0)
-                HUE_MODE_WZ.sendCommand(100)
+                HUE_MODE_EZ.sendCommand(80)
+                HUE_MODE_WZ.sendCommand(60)
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                HUE_MODE_EZ.sendCommand(0)
-                HUE_MODE_WZ.sendCommand(100)
+                HUE_MODE_EZ.sendCommand(80)
+                HUE_MODE_WZ.sendCommand(60)
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
