@@ -2,7 +2,7 @@
 Color  HUE_LAMP_SZL        "Lightstrip"            (HUE_LS)    [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
 Color  HUE_LAMP_SZD        "Schlafzimmer Decke"    (HUE_DL)    [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
 Color  HUE_LAMP_FLD        "Flurlicht"             (HUE_ST)    [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
-Color  HUE_LAMP_WZD        "Wohnzimmer Decke"      (HUE_KS)    [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
+Color  HUE_LAMP_WZD        "Wohnzimmer Decke"      (HUE_KS)    [Lighting] {channel = "hue:0210:00178840e9b7:5:color_temperature"}
 Dimmer HUE_LAMP_EZD        "Esszimmer"                         [Lighting] {channel = "hue:0220:00178840e9b7:7:color_temperature"}
 
 // Items to control lights
