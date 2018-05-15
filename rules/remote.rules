@@ -10,23 +10,26 @@ then
     var String timestamp = Hue_Remote_Flur.state.toString.split("-RMT-").get(1)
     if ( timestamp != remoteLastUpdate ) {
         logInfo("remote.rules", "Remote: New Command " + state)
+        sendBroadcastNotification("Remote: New Command " + state)
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
-                CL_WOHNZIMMER.sendCommand(command)
+                HUE_MODE_EZ.sendCommand(command)
+                HUE_MODE_WZ.sendCommand(command)
                 OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
-                CL_WOHNZIMMER.sendCommand(command)
+                HUE_MODE_EZ.sendCommand(command)
+                HUE_MODE_WZ.sendCommand(command)
                 OSRAM_KUECHE_STRIP.sendCommand("ON")
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
-                CL_WOHNZIMMER.sendCommand(command)
+                HUE_MODE_WZ.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
 			case "2002": {
@@ -38,35 +41,35 @@ then
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
-                if (CL_SCHLAFZIMMER.state == ON) {
-                    CL_SCHLAFZIMMER.sendCommand("OFF")
+                if (HUE_MODE_SZ.state == ON) {
+                    HUE_MODE_SZ.sendCommand("OFF")
                 } else {
                     var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
-                    CL_SCHLAFZIMMER.sendCommand(command)
+                    HUE_MODE_SZ.sendCommand(command)
                 }
             }
             case "3003": {
                 logInfo("remote.rules", "Remote: Dim down / Long")
                 var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
-                CL_SCHLAFZIMMER.sendCommand(command)
+                HUE_MODE_SZ.sendCommand(command)
             }
             case "4000": {
                 logInfo("remote.rules", "Remote: Off / Short - Case 4000")
                 SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
                 SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-				CL_HUE_ALL.sendCommand("OFF")
+				HUE_MODE_ALL.sendCommand("OFF")
         	}
 			case "4002": {
                 logInfo("remote.rules", "Remote: Off / Short")
                 SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
                 SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-				CL_HUE_ALL.sendCommand("OFF")
+				HUE_MODE_ALL.sendCommand("OFF")
         	}
             case "4003": {
                 logInfo("remote.rules", "Remote: Off / Long")
                 SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("NO_LIGHT")
                 SW_SETTINGS_FERNSEHEN.sendCommand("OFF")
-				CL_HUE_ALL.sendCommand("OFF")
+				HUE_MODE_ALL.sendCommand("OFF")
                 SWITCH_ALARM_SYSTEM.sendCommand("ON")
         	}
         }

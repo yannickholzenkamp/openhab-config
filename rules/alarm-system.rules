@@ -5,20 +5,20 @@ rule "SWITCH_ALARM_SYSTEM"
         if (receivedCommand == ON) {
             logInfo("alarm-system.rules", "Alarm armed")
             sendBroadcastNotification("Home Alarm System Armed.")
-            var HSBType currentState = CL_HUE_FL.state
+            var HSBType currentState = HUE_LAMP_FL.state
             var HSBType flash = new HSBType(new DecimalType(120), new PercentType(100), new PercentType(100))
-            CL_HUE_FL.sendCommand(flash)
+            HUE_LAMP_FL.sendCommand(flash)
             createTimer(now.plusSeconds(1)) [|
-                CL_HUE_FL.sendCommand(currentState)
+                HUE_LAMP_FL.sendCommand(currentState)
             ]
         } else {
             logInfo("alarm-system.rules", "Alarm disarmed")
             sendBroadcastNotification("Home Alarm System Disarmed!")
-            var HSBType currentState = CL_HUE_FL.state
+            var HSBType currentState = HUE_LAMP_FL.state
             var HSBType flash = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(100))
-            CL_HUE_FL.sendCommand(flash)
+            HUE_LAMP_FL.sendCommand(flash)
             createTimer(now.plusSeconds(1)) [|
-                CL_HUE_FL.sendCommand(currentState)
+                HUE_LAMP_FL.sendCommand(currentState)
             ]
         }
 end

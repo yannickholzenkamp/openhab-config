@@ -4,28 +4,34 @@
 
 rule "All lights"
   when 
-    Item CL_HUE_ALL received command
+    Item HUE_MODE_ALL received command
   then
-    CL_HUE_LS.sendCommand(receivedCommand)
-    CL_HUE_SZ.sendCommand(receivedCommand)
-    DM_HUE_WZ.sendCommand(receivedCommand)
-    CL_HUE_SF.sendCommand(receivedCommand)
+    HUE_LAMP_SL.sendCommand(receivedCommand)
+    HUE_LAMP_SD.sendCommand(receivedCommand)
+    HUE_LAMP_FL.sendCommand(receivedCommand)
+    HUE_LAMP_SD.sendCommand(receivedCommand)
+    HUE_LAMP_ED.sendCommand(receivedCommand)
     OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
-    CL_HUE_FL.sendCommand(receivedCommand)
   end
 
-rule "Schlafzimmerlicht an/aus"
+rule "Schlafzimmerlicht"
   when 
-    Item CL_SCHLAFZIMMER received command
+    Item HUE_MODE_SZ received command
   then
-    CL_HUE_LS.sendCommand(receivedCommand)
-    CL_HUE_SZ.sendCommand(receivedCommand)
+    HUE_LAMP_SL.sendCommand(receivedCommand)
+    HUE_LAMP_SD.sendCommand(receivedCommand)
   end
 
-rule "Wohnzimmerlicht an/aus"
+rule "Wohnzimmerlicht"
   when 
-    Item CL_WOHNZIMMER received command
+    Item HUE_MODE_WZ received command
   then
-    DM_HUE_WZ.sendCommand(receivedCommand)
-    CL_HUE_SF.sendCommand(receivedCommand)
+    HUE_LAMP_SD.sendCommand(receivedCommand)
+  end
+
+rule "Wohnzimmerlicht"
+  when 
+    Item HUE_MODE_EZ received command
+  then
+    HUE_LAMP_ED.sendCommand(receivedCommand)
   end
