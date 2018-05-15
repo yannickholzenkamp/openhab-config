@@ -12,7 +12,6 @@ rule "Fernsehen an, Lichter dimmen 1"
     } else {
       HARMONY_APLTV.sendCommand("Home")
       Thread::sleep(1000)
-      HARMONY_APLTV.sendCommand("Pause")
       HARMONY_APLTV.sendCommand("Home")
       HARMONY_LGTV.sendCommand("PowerOff")
       Thread::sleep(1000)

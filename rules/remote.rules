@@ -14,19 +14,19 @@ then
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(90), new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(90), new PercentType(100))
                 HUE_MODE_EZ.sendCommand(command)
                 HUE_MODE_WZ.sendCommand(command)
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(40))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(90), new PercentType(40))
                 HUE_MODE_WZ.sendCommand(command)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
