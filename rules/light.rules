@@ -10,6 +10,7 @@ rule "All lights"
     HUE_LAMP_SZD.sendCommand(receivedCommand)
     HUE_LAMP_FLD.sendCommand(receivedCommand)
     HUE_LAMP_WZD.sendCommand(receivedCommand)
+    HUE_LAMP_WZW.sendCommand(receivedCommand)
     HUE_LAMP_EZD.sendCommand(receivedCommand)
     OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
   end
