@@ -27,6 +27,7 @@ rule "Wohnzimmerlicht"
     Item HUE_MODE_WZ received command
   then
     HUE_LAMP_WZD.sendCommand(receivedCommand)
+    HUE_LAMP_WZW.sendCommand(receivedCommand)
   end
 
 rule "Esszimmerlicht"
@@ -41,6 +42,7 @@ rule "Wohnzimmerlicht CT"
     Item HUE_MODE_WZ_CT received command
   then
     HUE_LAMP_WZD_CT.sendCommand(receivedCommand)
+    HUE_LAMP_WZW_CT.sendCommand(receivedCommand)
   end
 
 rule "Esszimmerlicht CT"
