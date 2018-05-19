@@ -5,7 +5,7 @@ sitemap home label="Zuhause" {
         Text item=Hue_Temp_Kueche
         Text item=Hue_Temp_Flur
         Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
-        Switch item=CL_HUE_ALL label="Alle Lampen" icon="lightbulb"
+        Switch item=HUE_MODE_ALL label="Alle Lampen" icon="lightbulb"
         Switch item=SWITCH_ALARM_SYSTEM label="Alarmanlage" icon="siren"
 
     }
@@ -14,23 +14,30 @@ sitemap home label="Zuhause" {
 
         Switch item=SWITCH_LGTV label="Fernseher" icon="screen"
         Switch item=SWITCH_HKAVR label="AV Receiver" icon="receiver"
-        Switch item=DM_HUE_WZ label="Licht" icon="lightbulb"
-        Slider item=DM_HUE_WZ label="Dimmer" icon="lightbulb"
+        Switch item=HUE_MODE_WZ label="Licht" icon="lightbulb"
+        Slider item=HUE_MODE_WZ label="Dimmer" icon="lightbulb"
+
+    }
+
+    Frame label="Esszimmer" {
+
+        Switch item=HUE_MODE_EZ label="Licht" icon="lightbulb"
+        Slider item=HUE_MODE_EZ label="Dimmer" icon="lightbulb"
 
     }
 
     Frame label="Schlafzimmer" {
 
-        Switch item=CL_SCHLAFZIMMER label="Licht" icon="lightbulb"
-        Slider item=CL_SCHLAFZIMMER label="Dimmer" icon="lightbulb"
-        Colorpicker item=CL_SCHLAFZIMMER label="Lichtfarbe" icon="lightbulb"
+        Switch item=HUE_MODE_SZ label="Licht" icon="lightbulb"
+        Slider item=HUE_MODE_SZ label="Dimmer" icon="lightbulb"
+        Colorpicker item=HUE_MODE_SZ label="Lichtfarbe" icon="lightbulb"
 
     }
 
     Frame label="Flur" {
 
-        Switch item=CL_HUE_FL label="Licht" icon="lightbulb"
-        Slider item=CL_HUE_FL label="Dimmer" icon="lightbulb"
+        Switch item=HUE_LAMP_FLD label="Licht" icon="lightbulb"
+        Slider item=HUE_LAMP_FLD label="Dimmer" icon="lightbulb"
 
     }
 
