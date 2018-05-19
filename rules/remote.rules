@@ -42,7 +42,7 @@ then
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
                 logInfo("remote.rules", "State SZ: " + HUE_MODE_SZ.state)
-                if (HUE_MODE_SZ.state == ON) {
+                if (HUE_MODE_SZ.state.toString == "0,10,100") {
                     HUE_MODE_SZ.sendCommand("OFF")
                 } else {
                     var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
