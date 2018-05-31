@@ -1,4 +1,4 @@
-rule "Fernsehen an, Lichter dimmen 1"
+rule "Fernsehen an"
   when 
     Item SW_SETTINGS_FERNSEHEN received command
   then
@@ -8,8 +8,6 @@ rule "Fernsehen an, Lichter dimmen 1"
       HARMONY_LGTV.sendCommand("PowerOn")
       Thread::sleep(1000)
       HARMONY_HKAVR.sendCommand("PowerOn")
-      HUE_MODE_WZ.sendCommand(20)
-      HUE_MODE_WZ_CT.sendCommand(70)
     } else {
       HARMONY_APLTV.sendCommand("Home")
       Thread::sleep(1000)
@@ -18,11 +16,6 @@ rule "Fernsehen an, Lichter dimmen 1"
       Thread::sleep(1000)
       HARMONY_HKAVR.sendCommand("PowerOff")
       HARMONY_HKAVR.sendCommand("PowerOff")
-      if (SW_SETTINGS_FERNSEHEN_LIGHTS.state == "") {
-        HUE_MODE_WZ.sendCommand(100)
-        HUE_MODE_WZ_CT.sendCommand(70)
-      }
     }
-    SW_SETTINGS_FERNSEHEN_LIGHTS.postUpdate("")
   end
 
