@@ -29,17 +29,15 @@ then
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
-                HUE_MODE_EZ.sendCommand(20)
-                HUE_MODE_WZ.sendCommand(20)
+                HUE_MODE_EZ.sendCommand(100)
+                HUE_MODE_WZ.sendCommand(100)
                 HUE_MODE_EZ_CT.sendCommand(70)
                 HUE_MODE_WZ_CT.sendCommand(70)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
 			case "2002": {
                 logInfo("remote.rules", "Remote: Dim up / Short")
-                HUE_MODE_WZ.sendCommand("OFF")
-                HUE_MODE_EZ.sendCommand(70)
-                HUE_MODE_EZ_CT.sendCommand(70)
+                SWITCH_ALARM_SYSTEM.sendCommand("OFF")
             }
             case "2003": {
                 logInfo("remote.rules", "Remote: Dim up / Long")
@@ -47,18 +45,15 @@ then
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
-                logInfo("remote.rules", "State SZ: " + HUE_MODE_SZ.state)
-                if (HUE_MODE_SZ.state.toString == "0,10,100") {
-                    HUE_MODE_SZ.sendCommand("OFF")
-                } else {
-                    var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
-                    HUE_MODE_SZ.sendCommand(command)
-                }
+                HUE_MODE_WZ.sendCommand("OFF")
+                HUE_MODE_EZ.sendCommand(70)
+                HUE_MODE_EZ_CT.sendCommand(70)
             }
             case "3003": {
                 logInfo("remote.rules", "Remote: Dim down / Long")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
-                HUE_MODE_SZ.sendCommand(command)
+                HUE_MODE_WZ.sendCommand("OFF")
+                HUE_MODE_EZ.sendCommand(70)
+                HUE_MODE_EZ_CT.sendCommand(70)
             }
             case "4000": {
                 logInfo("remote.rules", "Remote: Off / Short - Case 4000")
