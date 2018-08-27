@@ -1,1 +1,2 @@
 String  Hue_Remote_Flur { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/22:400:JS(getHueRemoteEvent.js)]" }
+String  Hue_Remote_SZ   { http="<[http://192.168.2.106/api/HUE_BRIDGE_API_KEY/sensors/24:400:JS(getHueRemoteEvent.js)]" }

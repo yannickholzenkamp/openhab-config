@@ -1,7 +1,8 @@
 import java.lang.String
 var String remoteLastUpdate
+var String remoteLastUpdateSZ
 
-rule "Hue Remote"
+rule "Hue Remote Flur"
 when
     Item Hue_Remote_Flur changed 
 then
@@ -77,5 +78,45 @@ then
         	}
         }
         remoteLastUpdate = timestamp
+    }
+end
+
+rule "Hue Remote Schlafzimmer"
+when
+    Item Hue_Remote_SZ changed 
+then
+    logInfo("remote.rules", "Remote SZ Input: " + Hue_Remote_SZ.state.toString)
+    var String state = Hue_Remote_SZ.state.toString.split("-RMT-").get(0) 
+    var String timestamp = Hue_Remote_SZ.state.toString.split("-RMT-").get(1)
+    if ( timestamp != remoteLastUpdateSZ ) {
+        logInfo("remote.rules", "Remote SZ: New Command " + state)
+        switch state {
+            case "1000":
+            case "1002":
+            case "1003": {
+                logInfo("remote.rules", "Remote SZ: Bright")
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(100))
+                HUE_MODE_SZ.sendCommand(command)
+        	}
+			case "2002":
+            case "2003": {
+                logInfo("remote.rules", "Remote SZ: Reading")
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(50))
+                HUE_MODE_SZ.sendCommand(command)
+            }
+			case "3002":
+            case "3003": {
+                logInfo("remote.rules", "Remote SZ: Romance")
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
+                HUE_MODE_SZ.sendCommand(command)
+            }
+            case "4000":
+            case "4002":
+            case "4003": {
+                logInfo("remote.rules", "Remote SZ: Off")
+                HUE_MODE_SZ.sendCommand("OFF")
+        	}
+        }
+        remoteLastUpdateSZ = timestamp
     }
 end
