@@ -108,22 +108,22 @@ then
         	}
 			case "2002": {
                 logInfo("remote.rules", "Remote SZ: Reading")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(50))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(20), new PercentType(50))
                 HUE_MODE_SZ.sendCommand(command)
             }
             case "2003": {
                 logInfo("remote.rules", "Remote SZ: Reading")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(10), new PercentType(50))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(20), new PercentType(50))
                 HUE_MODE_SZ.sendCommand(command)
             }
 			case "3002": {
                 logInfo("remote.rules", "Remote SZ: Romance")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(25))
                 HUE_MODE_SZ.sendCommand(command)
             }
             case "3003": {
                 logInfo("remote.rules", "Remote SZ: Romance")
-                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(20))
+                var HSBType command = new HSBType(new DecimalType(0), new PercentType(100), new PercentType(25))
                 HUE_MODE_SZ.sendCommand(command)
             }
             case "4000": {
