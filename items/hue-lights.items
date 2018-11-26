@@ -13,6 +13,5 @@ Dimmer HUE_LAMP_EZD_CT     "Esszimmer CT"          [Lighting] {channel = "hue:02
 Color  HUE_MODE_ALL       "Alle Lampen"            [Lighting]
 Color  HUE_MODE_SZ        "Schlafzimmerlicht"      [Lighting]
 Dimmer HUE_MODE_WZ        "Wohnzimmerlicht"        [Lighting]
-Dimmer HUE_MODE_EZ        "Esszimmerlicht"         [Lighting]
 Dimmer HUE_MODE_WZ_CT     "Wohnzimmerlicht CT"     [Lighting]
 Dimmer HUE_MODE_EZ_CT     "Esszimmerlicht CT"      [Lighting]
