@@ -30,16 +30,16 @@ when
 then
   if (receivedCommand == ON) {
     logInfo("settings.rules", "Step: 1")
-    HARMONY_HKAVR.postUpdate("Home")
+    HARMONY_HKAVR.sendCommand("Home")
     Thread::sleep(5000)
     logInfo("settings.rules", "Step: 2")
-    HARMONY_HKAVR.postUpdate("Menu")
+    HARMONY_HKAVR.sendCommand("Menu")
     Thread::sleep(5000)
     logInfo("settings.rules", "Step: 3")
-    HARMONY_APLTV.postUpdate("DirectionRight")
+    HARMONY_APLTV.sendCommand("DirectionRight")
     Thread::sleep(5000)
     logInfo("settings.rules", "Step: 4")
-    HARMONY_APLTV.postUpdate("Select")
+    HARMONY_APLTV.sendCommand("Select")
   } else {
 
   }
