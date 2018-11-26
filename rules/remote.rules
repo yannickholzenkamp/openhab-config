@@ -15,23 +15,17 @@ then
         switch state {
             case "1000": {
                 logInfo("remote.rules", "Remote: On / Short - Case 1000")
-                HUE_MODE_EZ.sendCommand(100)
                 HUE_MODE_WZ.sendCommand(100)
-                HUE_MODE_EZ_CT.sendCommand(70)
                 HUE_MODE_WZ_CT.sendCommand(70)
         	}
             case "1002": {
                 logInfo("remote.rules", "Remote: On / Short")
-                HUE_MODE_EZ.sendCommand(100)
                 HUE_MODE_WZ.sendCommand(100)
-                HUE_MODE_EZ_CT.sendCommand(70)
                 HUE_MODE_WZ_CT.sendCommand(70)
         	}
             case "1003": {
                 logInfo("remote.rules", "Remote: On / Long")
-                HUE_MODE_EZ.sendCommand(100)
                 HUE_MODE_WZ.sendCommand(100)
-                HUE_MODE_EZ_CT.sendCommand(70)
                 HUE_MODE_WZ_CT.sendCommand(70)
                 SW_SETTINGS_FERNSEHEN.sendCommand("ON")
         	}
@@ -46,14 +40,10 @@ then
 			case "3002": {
                 logInfo("remote.rules", "Remote: Dim down / Short")
                 HUE_MODE_WZ.sendCommand("OFF")
-                HUE_MODE_EZ.sendCommand(70)
-                HUE_MODE_EZ_CT.sendCommand(70)
             }
             case "3003": {
                 logInfo("remote.rules", "Remote: Dim down / Long")
                 HUE_MODE_WZ.sendCommand("OFF")
-                HUE_MODE_EZ.sendCommand(70)
-                HUE_MODE_EZ_CT.sendCommand(70)
             }
             case "4000": {
                 logInfo("remote.rules", "Remote: Off / Short - Case 4000")

@@ -9,9 +9,7 @@ rule "Hue_Motion_Flur"
                 sendBroadcastNotification("Bewegung erkannt! - Flur")
             }
             if (now.getHourOfDay() > 16 && now.getHourOfDay() < 20) {
-                HUE_MODE_EZ.sendCommand(100)
                 HUE_MODE_WZ.sendCommand(100)
-                HUE_MODE_EZ_CT.sendCommand(70)
                 HUE_MODE_WZ_CT.sendCommand(70)
             }
         } else {
