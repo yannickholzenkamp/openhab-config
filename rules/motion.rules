@@ -3,9 +3,17 @@ rule "Hue_Motion_Flur"
     	Item Hue_Motion_Flur changed
     then
         logInfo("motion.rules", "Motion detected: Flur")
-        if((Hue_Motion_Flur.state == ON) && (SWITCH_ALARM_SYSTEM.state == ON)){
-            logInfo("motion.rules", "Alarm triggered")
-            sendBroadcastNotification("Bewegung erkannt! - Flur")
+        if(Hue_Motion_Flur.state == ON){
+            if (SWITCH_ALARM_SYSTEM.state == ON) {
+                logInfo("motion.rules", "Alarm triggered")
+                sendBroadcastNotification("Bewegung erkannt! - Flur")
+            }
+            if (now.getHourOfDay() > 16 && now.getHourOfDay() < 20) {
+                HUE_MODE_EZ.sendCommand(100)
+                HUE_MODE_WZ.sendCommand(100)
+                HUE_MODE_EZ_CT.sendCommand(70)
+                HUE_MODE_WZ_CT.sendCommand(70)
+            }
         } else {
             logInfo("motion.rules", "Alarm not triggered")
         }
