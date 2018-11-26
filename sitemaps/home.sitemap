@@ -5,6 +5,7 @@ sitemap home label="Zuhause" {
         Text item=Hue_Temp_Kueche
         Text item=Hue_Temp_Flur
         Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
+        Switch item=SW_SETTINGS_SOMETHING label="Smth" icon="lightbulb"
         Switch item=HUE_MODE_ALL label="Alle Lampen" icon="lightbulb"
         Switch item=SWITCH_ALARM_SYSTEM label="Alarmanlage" icon="siren"
 
