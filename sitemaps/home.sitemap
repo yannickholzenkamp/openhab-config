@@ -19,13 +19,6 @@ sitemap home label="Zuhause" {
 
     }
 
-    Frame label="Esszimmer" {
-
-        Switch item=HUE_MODE_EZ label="Licht" icon="lightbulb"
-        Slider item=HUE_MODE_EZ label="Dimmer" icon="lightbulb"
-
-    }
-
     Frame label="Schlafzimmer" {
 
         Switch item=HUE_MODE_SZ label="Licht" icon="lightbulb"

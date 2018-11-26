@@ -8,6 +8,13 @@ rule "Hue_Motion_Flur"
                 logInfo("motion.rules", "Alarm triggered")
                 sendBroadcastNotification("Bewegung erkannt! - Flur")
             }
+            logInfo("motion.rules", "Hour of day: " + now.getHourOfDay())
+            // Morning
+            if (now.getHourOfDay() > 5 && now.getHourOfDay() < 6) {
+                HUE_MODE_WZ.sendCommand(100)
+                HUE_MODE_WZ_CT.sendCommand(70)
+            }
+            // Evening
             if (now.getHourOfDay() > 16 && now.getHourOfDay() < 20) {
                 HUE_MODE_WZ.sendCommand(100)
                 HUE_MODE_WZ_CT.sendCommand(70)
