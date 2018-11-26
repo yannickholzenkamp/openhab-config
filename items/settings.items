@@ -1,1 +1,2 @@
 Switch  SW_SETTINGS_FERNSEHEN    "Fernseher"    [Switchable]    {channel=">[ON] >[OFF]"}
+Switch  SW_SETTINGS_SOMETHING    "Something"    [Switchable]    {channel=">[ON] >[OFF]"}
