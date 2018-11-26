@@ -15,7 +15,7 @@ rule "Hue_Motion_Flur"
                 HUE_MODE_WZ_CT.sendCommand(70)
             }
             // Evening
-            if (now.getHourOfDay() > 16 && now.getHourOfDay() < 20) {
+            if (now.getHourOfDay() > 16 && now.getHourOfDay() < 21) {
                 HUE_MODE_WZ.sendCommand(100)
                 HUE_MODE_WZ_CT.sendCommand(70)
             }
