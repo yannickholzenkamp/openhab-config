@@ -34,6 +34,7 @@ then
     Thread::sleep(5000)
     logInfo("settings.rules", "Step: 2")
     HARMONY_APLTV.sendCommand("Menu")
+    HARMONY_APLTV.sendCommand("Menu")
     Thread::sleep(5000)
     logInfo("settings.rules", "Step: 3")
     HARMONY_APLTV.sendCommand("DirectionRight")

@@ -9,10 +9,15 @@ rule "Hue_Motion_Flur"
                 sendBroadcastNotification("Bewegung erkannt! - Flur")
             }
             logInfo("motion.rules", "Hour of day: " + now.getHourOfDay())
+            logInfo("motion.rules", "MR1: " + HUE_MODE_SZ.state)
+            logInfo("motion.rules", "MR2: " + HUE_MODE_WZ.state)
+            logInfo("motion.rules", "MR3: " + SW_SETTINGS_FERNSEHEN.state)
+            logInfo("motion.rules", "MR4: " + OSRAM_KUECHE_STRIP.state)
             if ((HUE_MODE_SZ.state == "OFF" || HUE_MODE_SZ.state == 0 || HUE_MODE_SZ.state == NULL) &&
                 (HUE_MODE_WZ.state == "OFF" || HUE_MODE_WZ.state == 0 || HUE_MODE_WZ.state == NULL) &&
                 (SW_SETTINGS_FERNSEHEN.state == "OFF" || SW_SETTINGS_FERNSEHEN.state == 0 || SW_SETTINGS_FERNSEHEN.state == NULL) &&
                 (OSRAM_KUECHE_STRIP.state == "OFF" || OSRAM_KUECHE_STRIP.state == 0 || OSRAM_KUECHE_STRIP.state == NULL)) {
+                logInfo("motion.rules", "MR5: active")
                 // Morning
                 if (now.getHourOfDay() > 5 && now.getHourOfDay() < 6) {
                     HUE_MODE_WZ.sendCommand(100)
