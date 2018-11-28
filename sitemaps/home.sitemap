@@ -7,8 +7,6 @@ sitemap home label="Zuhause" {
 
     Frame label="Wohnzimmer" {
         Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="screen"
-        Switch item=SWITCH_LGTV label="Fernseher" icon="screen"
-        Switch item=SWITCH_HKAVR label="AV Receiver" icon="receiver"
         Switch item=HUE_MODE_WZ label="Licht" icon="lightbulb"
         Slider item=HUE_MODE_WZ label="Dimmer" icon="lightbulb"
     }
@@ -19,12 +17,12 @@ sitemap home label="Zuhause" {
     }
 
     Frame label="Flur" {
-        Text item=Hue_Temp_Flur
+        Text item=Hue_Temp_Flur icon="temperature"
         Switch item=HUE_LAMP_FLD label="Licht" icon="lightbulb"
     }
 
     Frame label="Küche" {
-        Text item=Hue_Temp_Kueche
+        Text item=Hue_Temp_Kueche icon="temperature"
         Switch item=OSRAM_KUECHE_STRIP label="Licht" icon="lightbulb"
     }
 
