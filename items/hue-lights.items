@@ -1,17 +1,17 @@
 // Items controlled via Philips Hue
-Color  HUE_LAMP_SZL        "Lightstrip"            [Lighting] {channel = "hue:0210:00178840e9b7:4:color"}
-Color  HUE_LAMP_SZD        "Schlafzimmer Decke"    [Lighting] {channel = "hue:0210:00178840e9b7:1:color"}
-Color  HUE_LAMP_FLD        "Flurlicht"             [Lighting] {channel = "hue:0210:00178840e9b7:3:color"}
-Dimmer HUE_LAMP_WZD        "Wohnzimmer Decke"      [Lighting] {channel = "hue:0210:00178840e9b7:5:color"}
-Dimmer HUE_LAMP_WZW        "Wohnzimmer Wand"       [Lighting] {channel = "hue:0220:00178840e9b7:8:brightness"}
-Dimmer HUE_LAMP_EZD        "Esszimmer"             [Lighting] {channel = "hue:0220:00178840e9b7:7:brightness"}
-Dimmer HUE_LAMP_WZD_CT     "Wohnzimmer Decke CT"   [Lighting] {channel = "hue:0210:00178840e9b7:5:color_temperature"}
-Dimmer HUE_LAMP_WZW_CT     "Wohnzimmer Wand CT"    [Lighting] {channel = "hue:0220:00178840e9b7:8:color_temperature"}
-Dimmer HUE_LAMP_EZD_CT     "Esszimmer CT"          [Lighting] {channel = "hue:0220:00178840e9b7:7:color_temperature"}
+Color  HUE_LAMP_SZL        "Lightstrip"            {channel = "hue:0210:00178840e9b7:4:color"}
+Color  HUE_LAMP_SZD        "Schlafzimmer Decke"    {channel = "hue:0210:00178840e9b7:1:color"}
+Color  HUE_LAMP_FLD        "Flurlicht"             {channel = "hue:0210:00178840e9b7:3:color"}
+Dimmer HUE_LAMP_WZD        "Wohnzimmer Decke"      {channel = "hue:0210:00178840e9b7:5:color"}
+Dimmer HUE_LAMP_WZW        "Wohnzimmer Wand"       {channel = "hue:0220:00178840e9b7:8:brightness"}
+Dimmer HUE_LAMP_EZD        "Esszimmer"             {channel = "hue:0220:00178840e9b7:7:brightness"}
+Dimmer HUE_LAMP_WZD_CT     "Wohnzimmer Decke CT"   {channel = "hue:0210:00178840e9b7:5:color_temperature"}
+Dimmer HUE_LAMP_WZW_CT     "Wohnzimmer Wand CT"    {channel = "hue:0220:00178840e9b7:8:color_temperature"}
+Dimmer HUE_LAMP_EZD_CT     "Esszimmer CT"          {channel = "hue:0220:00178840e9b7:7:color_temperature"}
 
 // Items to control lights
-Color  HUE_MODE_ALL       "Alle Lampen"            [Lighting]
+Color  HUE_MODE_ALL       "Alle Lampen"
 Color  HUE_MODE_SZ        "Schlafzimmerlicht"      [Lighting]
 Dimmer HUE_MODE_WZ        "Wohnzimmerlicht"        [Lighting]
-Dimmer HUE_MODE_WZ_CT     "Wohnzimmerlicht CT"     [Lighting]
-Dimmer HUE_MODE_EZ_CT     "Esszimmerlicht CT"      [Lighting]
+Dimmer HUE_MODE_WZ_CT     "Wohnzimmerlicht CT"
+Dimmer HUE_MODE_EZ_CT     "Esszimmerlicht CT"
