@@ -1,44 +1,31 @@
 sitemap home label="Zuhause" {
 
     Frame label="Wohnung" {
-
-        Text item=Hue_Temp_Kueche
-        Text item=Hue_Temp_Flur
-        Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="lightbulb"
-        Switch item=SW_SETTINGS_SOMETHING label="Smth" icon="lightbulb"
         Switch item=HUE_MODE_ALL label="Alle Lampen" icon="lightbulb"
         Switch item=SWITCH_ALARM_SYSTEM label="Alarmanlage" icon="siren"
-
     }
 
     Frame label="Wohnzimmer" {
-
+        Switch item=SW_SETTINGS_FERNSEHEN label="Fernsehen" icon="screen"
         Switch item=SWITCH_LGTV label="Fernseher" icon="screen"
         Switch item=SWITCH_HKAVR label="AV Receiver" icon="receiver"
         Switch item=HUE_MODE_WZ label="Licht" icon="lightbulb"
         Slider item=HUE_MODE_WZ label="Dimmer" icon="lightbulb"
-
     }
 
     Frame label="Schlafzimmer" {
-
         Switch item=HUE_MODE_SZ label="Licht" icon="lightbulb"
         Slider item=HUE_MODE_SZ label="Dimmer" icon="lightbulb"
-        Colorpicker item=HUE_MODE_SZ label="Lichtfarbe" icon="lightbulb"
-
     }
 
     Frame label="Flur" {
-
+        Text item=Hue_Temp_Flur
         Switch item=HUE_LAMP_FLD label="Licht" icon="lightbulb"
-        Slider item=HUE_LAMP_FLD label="Dimmer" icon="lightbulb"
-
     }
 
     Frame label="Küche" {
-
+        Text item=Hue_Temp_Kueche
         Switch item=OSRAM_KUECHE_STRIP label="Licht" icon="lightbulb"
-
     }
 
 }
