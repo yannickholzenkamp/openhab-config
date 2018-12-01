@@ -40,9 +40,6 @@ rule "Hue_Motion_Kueche"
     then
         logInfo("motion.rules", "Motion detected: Kueche")
         if(Hue_Motion_Kueche.state == ON){
-            HUE_MODE_KU.sendCommand(ON)
-            Thread::sleep(10000)
-
             if (SWITCH_ALARM_SYSTEM.state == ON) {
                logInfo("motion.rules", "Alarm triggered")
                 sendBroadcastNotification("Bewegung erkannt! - Küche")
