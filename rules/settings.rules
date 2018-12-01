@@ -12,6 +12,7 @@ rule "Fernsehen an"
       if (HUE_MODE_WZ.state.toString != "0" && HUE_MODE_WZ.state.toString != "NULL") {
         HUE_MODE_WZ.sendCommand(20)
         HUE_MODE_WZ_CT.sendCommand(70)
+        OSRAM_WOHNWAND.sendCommand("OFF")
       }
     } else {
       HARMONY_APLTV.sendCommand("Home")
@@ -21,28 +22,8 @@ rule "Fernsehen an"
       Thread::sleep(1000)
       HARMONY_HKAVR.sendCommand("PowerOff")
       HARMONY_HKAVR.sendCommand("PowerOff")
+      HUE_MODE_WZ.sendCommand(80)
+      HUE_MODE_WZ_CT.sendCommand(70)
+      OSRAM_WOHNWAND.sendCommand("ON")
     }
   end
-
-rule "Fernsehen an"
-when
-  Item SW_SETTINGS_SOMETHING received command
-then
-  if (receivedCommand == ON) {
-    logInfo("settings.rules", "Step: 1")
-    HARMONY_APLTV.sendCommand("Home")
-    Thread::sleep(5000)
-    logInfo("settings.rules", "Step: 2")
-    HARMONY_APLTV.sendCommand("Menu")
-    HARMONY_APLTV.sendCommand("Menu")
-    Thread::sleep(5000)
-    logInfo("settings.rules", "Step: 3")
-    HARMONY_APLTV.sendCommand("DirectionRight")
-    Thread::sleep(5000)
-    logInfo("settings.rules", "Step: 4")
-    HARMONY_APLTV.sendCommand("Select")
-  } else {
-
-  }
-end
-

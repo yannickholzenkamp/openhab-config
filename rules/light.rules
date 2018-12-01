@@ -9,7 +9,7 @@ rule "All lights"
     HUE_LAMP_SZ.sendCommand(receivedCommand)
     HUE_LAMP_FLD.sendCommand(receivedCommand)
     HUE_LAMP_WZ.sendCommand(receivedCommand)
-    OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
+    HUE_MODE_KU.sendCommand(receivedCommand)
   end
 
 rule "Schlafzimmerlicht"
@@ -27,6 +27,15 @@ rule "Wohnzimmerlicht"
     HUE_LAMP_WZD.sendCommand(receivedCommand)
     HUE_LAMP_WZW.sendCommand(receivedCommand)
     HUE_LAMP_EZD.sendCommand(receivedCommand)
+    OSRAM_WOHNWAND.sendCommand(receivedCommand)
+  end
+
+rule "Küchenlicht"
+  when
+    Item HUE_MODE_KU received command
+  then
+    OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
+    HUE_LAMP_KUK.sendCommand(receivedCommand)
   end
 
 rule "Wohnzimmerlicht CT"

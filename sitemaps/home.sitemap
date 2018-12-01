@@ -23,7 +23,7 @@ sitemap home label="Zuhause" {
 
     Frame label="Küche" {
         Text item=Hue_Temp_Kueche icon="temperature"
-        Switch item=OSRAM_KUECHE_STRIP label="Licht" icon="lightbulb"
+        Switch item=HUE_MODE_KU label="Licht" icon="lightbulb"
     }
 
 }

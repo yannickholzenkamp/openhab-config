@@ -8,10 +8,12 @@ Dimmer HUE_LAMP_EZD        "Esszimmer"             {channel = "hue:0220:00178840
 Dimmer HUE_LAMP_WZD_CT     "Wohnzimmer Decke CT"   {channel = "hue:0210:00178840e9b7:5:color_temperature"}
 Dimmer HUE_LAMP_WZW_CT     "Wohnzimmer Wand CT"    {channel = "hue:0220:00178840e9b7:8:color_temperature"}
 Dimmer HUE_LAMP_EZD_CT     "Esszimmer CT"          {channel = "hue:0220:00178840e9b7:7:color_temperature"}
+Dimmer HUE_LAMP_KUK        "Kueche klein"          {channel = "hue:0100:00178840e9b7:10:brightness"}
 
 // Items to control lights
 Color  HUE_MODE_ALL       "Alle Lampen"
 Color  HUE_MODE_SZ        "Schlafzimmerlicht"      [Lighting]
 Dimmer HUE_MODE_WZ        "Wohnzimmerlicht"        [Lighting]
+Dimmer HUE_MODE_KU        "Küchenlicht"            [Lighting]
 Dimmer HUE_MODE_WZ_CT     "Wohnzimmerlicht CT"
 Dimmer HUE_MODE_EZ_CT     "Esszimmerlicht CT"
