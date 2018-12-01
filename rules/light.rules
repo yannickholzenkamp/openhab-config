@@ -34,6 +34,7 @@ rule "Küchenlicht"
   when
     Item HUE_MODE_KU received command
   then
+    logInfo("light.rules", "Kueche received command " + receivedCommand)
     OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
     HUE_LAMP_KUK.sendCommand(receivedCommand)
   end
