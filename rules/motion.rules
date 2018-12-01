@@ -40,7 +40,11 @@ rule "Hue_Motion_Kueche"
     then
         logInfo("motion.rules", "Motion detected: Kueche")
         if(Hue_Motion_Kueche.state == ON){
-            HUE_MODE_KU.sendCommand("ON")
+            HUE_MODE_KU.sendCommand(ON)
+            timer = Timer.createTimer(now.plusSeconds(10) [|
+                HUE_MODE_KU.sendCommand(OFF)
+                timer = null   // reset the timer
+            ])
 
             if (SWITCH_ALARM_SYSTEM.state == ON) {
                logInfo("motion.rules", "Alarm triggered")
