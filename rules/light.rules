@@ -24,6 +24,7 @@ rule "Wohnzimmerlicht"
   when 
     Item HUE_MODE_WZ received command
   then
+    logInfo("light.rules", "HUE_MODE_WZ received command " + receivedCommand)
     HUE_LAMP_WZD.sendCommand(receivedCommand)
     HUE_LAMP_WZW.sendCommand(receivedCommand)
     HUE_LAMP_EZD.sendCommand(receivedCommand)
@@ -34,7 +35,7 @@ rule "Küchenlicht"
   when
     Item HUE_MODE_KU received command
   then
-    logInfo("light.rules", "Kueche received command " + receivedCommand)
+    logInfo("light.rules", "HUE_MODE_KU received command " + receivedCommand)
     OSRAM_KUECHE_STRIP.sendCommand(receivedCommand)
     HUE_LAMP_KUK.sendCommand(receivedCommand)
   end
