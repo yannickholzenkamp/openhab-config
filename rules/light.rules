@@ -6,9 +6,9 @@ rule "All lights"
   when 
     Item HUE_MODE_ALL received command
   then
-    HUE_LAMP_SZ.sendCommand(receivedCommand)
+    HUE_MODE_SZ.sendCommand(receivedCommand)
     HUE_LAMP_FLD.sendCommand(receivedCommand)
-    HUE_LAMP_WZ.sendCommand(receivedCommand)
+    HUE_MODE_WZ.sendCommand(receivedCommand)
     HUE_MODE_KU.sendCommand(receivedCommand)
   end
 
